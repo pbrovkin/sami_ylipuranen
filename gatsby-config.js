@@ -7,7 +7,17 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = {
   siteMetadata: {
-    title: `Personal trainer`,
+    title: `Sami`,
+    menuLinks: [
+      {
+        name: 'home',
+        link: '/'
+      },
+      {
+        name: 'page2',
+        link: '/page-2'
+      }
+    ],
     author: {
       name: `Sami Ylipuranen`,
       summary: `lives and works in Helsinki.`,
