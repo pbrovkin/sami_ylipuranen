@@ -1,9 +1,5 @@
 import React from "react"
-<<<<<<< HEAD
 import { Link } from "gatsby"
-=======
-import './header.css'
->>>>>>> 065d53acf10f88250fdf8348eb9a24e4c2540806
 
 
 const Header = ({ siteTitle, menuLinks }) => (
