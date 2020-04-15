@@ -1,0 +1,14 @@
+.service-div {
+    width: 20rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgba(61, 61, 61, 1);
+    background: linear-gradient(135deg, rgba(202, 228, 195, 1) 0%, rgba(132, 222, 107, 1) 50%, rgba(61, 216, 19, 1) 100%);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: -2px 3px 7px 5px rgba(204, 194, 204, 1);
+    -webkit-box-shadow: -2px 3px 7px 5px rgba(204, 194, 204, 1);
+    -mozBoxShadow: -2px 3px 7px 5px rgba(204, 194, 204, 1);
+}

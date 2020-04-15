@@ -1,0 +1,8 @@
+/*Style*/
+
+.service-container {
+    display: flex;
+    alignItems: center;
+    justifyContent: space-around;
+    padding: 2rem;
+}
