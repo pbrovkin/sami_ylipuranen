@@ -7,20 +7,28 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = {
   siteMetadata: {
-    title: `Sami`,
+    title: `Sami Ylipuranen`,
     menuLinks: [
       {
         name: 'home',
         link: '/'
       },
       {
-        name: 'page2',
-        link: '/page-2'
+        name: 'services',
+        link: '/services'
+      },
+      {
+        name: 'blogs',
+        link: '/blogs'
+      },
+      {
+        name: 'contact',
+        link: '/contact'
       }
     ],
     author: {
       name: `Sami Ylipuranen`,
-      summary: `lives and works in Helsinki.`,
+      summary: `personal trainer, lives and works in Helsinki.`,
     },
     description: `Personal trainer website.`,
     siteUrl: `http://localhost:8000/`,

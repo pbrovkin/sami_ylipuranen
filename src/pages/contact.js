@@ -4,18 +4,18 @@ import Layout from "../components/layout"
 import Bio from "../components/bio"
 import SEO from "../components/seo"
 
-const Services = () => {
+const Contact = () => {
     
     return (
         <Layout>
-            <SEO title="Services" />
+            <SEO title="Contact" />
             <Bio />
             <div>
-                <h1>Services </h1>
+                <h1>Contacts </h1>
                 <ul>
-                    <li>service 1</li>
-                    <li>service 2</li>
-                    <li>service 3</li>
+                    <li>Contact 1</li>
+                    <li>Contact 2</li>
+                    <li>Contact 3</li>
                 </ul>
                 <Link to="/">Go Home</Link>
             </div>
@@ -23,4 +23,4 @@ const Services = () => {
     )
 }
 
-export default Services
+export default Contact

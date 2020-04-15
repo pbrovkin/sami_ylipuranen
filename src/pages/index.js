@@ -1,19 +1,16 @@
 import React from "react"
 import { Link } from "gatsby"
-
-import Bio from "../components/bio"
-
 import Layout from "../components/layout"
+import Bio from "../components/bio"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Sami Ylipuranen" />
+    <SEO title="Terveet Tavat" />
     <Bio />
-    <h1>Welcome to my page</h1>
-    <p>Welcome to your new Gatsby site.</p>
+    <h1>Welcome to personal trainer page</h1>
     <p>Now go build something great.</p>
-    <Link to="/about/">Go to About</Link>
+    <Link to="/services/">Go to Services</Link>
   </Layout>
 )
 

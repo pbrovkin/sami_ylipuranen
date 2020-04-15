@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,7 +11,7 @@ const Blogs = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title="Blogs" />
       <Bio />
       {posts.map(({ node }) => {
         const title = node.title || node.slug
@@ -35,6 +34,7 @@ const Blogs = ({ data, location }) => {
           </article>
         )
       })}
+      <Link to="/">Go home</Link>
     </Layout>
   )
 }
