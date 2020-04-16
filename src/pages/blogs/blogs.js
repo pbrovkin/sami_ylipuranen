@@ -11,6 +11,7 @@ const Blogs = ({ data, location }) => {
 
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allContentfulPost.edges
+  
   const postsToShow = posts.filter(post => post.node.title.toLowerCase().includes(filter.toLowerCase()))
 
   const handleFilterChange = (event) => {
