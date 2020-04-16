@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../../components/layout"
-import Bio from "../../components/bio"
 import SEO from "../../components/seo"
 import Filter from "../../components/filter"
+import Footer from "../../components/footer"
 import { rhythm } from "../../utils/typography"
 
 const Blogs = ({ data, location }) => {
@@ -11,7 +11,7 @@ const Blogs = ({ data, location }) => {
 
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allContentfulPost.edges
-  
+
   const postsToShow = posts.filter(post => post.node.title.toLowerCase().includes(filter.toLowerCase()))
 
   const handleFilterChange = (event) => {
@@ -21,7 +21,6 @@ const Blogs = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Blogs" />
-      <Bio />
       <Filter value={filter} onChange={handleFilterChange} />
       {postsToShow.map(({ node }) => {
         const title = node.title || node.slug
@@ -44,7 +43,13 @@ const Blogs = ({ data, location }) => {
           </article>
         )
       })}
-      <Link to="/">Go home</Link>
+      <hr
+        style={{
+          marginBottom: rhythm(1),
+        }}
+      />
+      <Link to="/">← Go home</Link>
+      <Footer />
     </Layout>
   )
 }

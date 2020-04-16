@@ -1,15 +1,14 @@
 import React from 'react'
 import { Link } from "gatsby"
 import Layout from "../../components/layout"
-import Bio from "../../components/bio"
 import SEO from "../../components/seo"
+import Footer from "../../components/footer"
 
 const Services = () => {
 
     return (
         <Layout>
             <SEO title="Services" />
-            <Bio />
             <div>
                 <h1>Services </h1>
                 <ul>
@@ -47,7 +46,9 @@ const Services = () => {
                         </p>
                     </li>
                 </ul>
-                <Link to="/">Go Home</Link>
+                <hr />
+                <Link to="/">← Go Home</Link>
+                <Footer />
             </div>
         </Layout>
     )

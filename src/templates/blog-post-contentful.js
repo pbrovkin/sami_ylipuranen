@@ -1,8 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Bio from "../components/bio/bio"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo/seo"
+import Footer from "../components/footer"
 import { rhythm } from "../utils/typography"
 
 const BlogPostContentfulTemplate = ({ data, pageContext, location }) => {
@@ -33,9 +33,6 @@ const BlogPostContentfulTemplate = ({ data, pageContext, location }) => {
             marginBottom: rhythm(1),
           }}
         />
-        <footer>
-          <Bio />
-        </footer>
       </article>
 
       <nav>
@@ -64,6 +61,7 @@ const BlogPostContentfulTemplate = ({ data, pageContext, location }) => {
           </li>
         </ul>
       </nav>
+      <Footer />
     </Layout>
   )
 }
