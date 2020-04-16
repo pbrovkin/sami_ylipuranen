@@ -10,19 +10,19 @@ module.exports = {
     title: `Sami Ylipuranen`,
     menuLinks: [
       {
-        name: 'home',
+        name: 'Home',
         link: '/'
       },
       {
-        name: 'services',
+        name: 'Services',
         link: '/services'
       },
       {
-        name: 'blogs',
+        name: 'Blogs',
         link: '/blogs'
       },
       {
-        name: 'contact',
+        name: 'Contact',
         link: '/contact'
       }
     ],
