@@ -26,6 +26,14 @@ const BlogPostContentfulTemplate = ({ data, pageContext, location }) => {
           >
             {post.title}
           </h1>
+          <p
+            style={{
+              display: `block`,
+              marginBottom: rhythm(1),
+            }}
+          >
+            {post.date}
+          </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.content.childContentfulRichText.html }} />
         <hr
@@ -77,6 +85,7 @@ export const pageQuery = graphql`
     }
     contentfulPost( slug: { eq: $slug }) {
       title
+      date(formatString: "MMMM DD, YYYY")
       description
       content {
         childContentfulRichText {

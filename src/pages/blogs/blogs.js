@@ -66,6 +66,7 @@ export const pageQuery = graphql`
     allContentfulPost {
       edges {
         node {
+          date
           title
           description
           slug
