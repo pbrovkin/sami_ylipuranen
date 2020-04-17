@@ -1,4 +1,12 @@
 /*basic colours*/
+#___gatsby {
+  height: 100%;
+}
+
+#gatsby-focus-wrapper {
+  height: 100%;
+}
+
 :root {
   --white: #ffffff;
   --black: #000000;
@@ -33,6 +41,7 @@ body {
 .container {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 ul {
@@ -42,7 +51,6 @@ ul {
 
 ul li {
   list-style: none;
-  margin-bottom: 0;
 }
 
 h1,
@@ -57,7 +65,6 @@ h6 {
 
 a {
   text-decoration: none;
-  box-shadow: none;
 }
 
 p {

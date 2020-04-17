@@ -4,7 +4,6 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import Filter from "../../components/filter"
 import Footer from "../../components/footer"
-import { rhythm } from "../../utils/typography"
 
 const Blogs = ({ data, location }) => {
   const [filter, setFilter] = useState('')
@@ -27,12 +26,8 @@ const Blogs = ({ data, location }) => {
         return (
           <article key={node.slug}>
             <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.slug}>
+              <h3>
+                <Link to={node.slug}>
                   {title}
                 </Link>
               </h3>
@@ -43,11 +38,7 @@ const Blogs = ({ data, location }) => {
           </article>
         )
       })}
-      <hr
-        style={{
-          marginBottom: rhythm(1),
-        }}
-      />
+      <hr/>
       <Link to="/">← Go home</Link>
       <Footer />
     </Layout>

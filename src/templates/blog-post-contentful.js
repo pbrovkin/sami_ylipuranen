@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo/seo"
 import Footer from "../components/footer"
-import { rhythm } from "../utils/typography"
 
 const BlogPostContentfulTemplate = ({ data, pageContext, location }) => {
   const post = data.contentfulPost
@@ -18,33 +17,16 @@ const BlogPostContentfulTemplate = ({ data, pageContext, location }) => {
       />
       <article>
         <header>
-          <h1
-            style={{
-              marginTop: rhythm(1),
-              marginBottom: 0,
-            }}
-          >
+          <h1>
             {post.title}
           </h1>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.content.childContentfulRichText.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <hr />
       </article>
 
       <nav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+        <ul>
           <li>
             {previous && (
               <Link to={previous.slug} rel="prev">

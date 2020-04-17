@@ -1,10 +1,10 @@
 .header {
   position: fixed;
-  width: 100%;
   background-color: rgba(0,0,0, .8);
+  width: 100%;
 }
 
-.header_container {
+.headerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,10 +12,10 @@
   padding: 0 40px;
 }
 
-.title {
+.logo {
   color: var(--blue);
   font-weight: bold;
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .list {
@@ -26,8 +26,15 @@
   margin-right: 20px;
 }
 
-.item a {
+
+.link {
   color: var(--white);
+  font-size: 20px;
+}
+
+.link:hover {
+  color: var(--green);
+  border-bottom: 1px solid var(--green);
 }
 
 .item:last-child {
