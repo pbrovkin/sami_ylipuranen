@@ -27,11 +27,11 @@ const Blogs = ({ data, location }) => {
         return (
           <article key={node.slug}>
             <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
+                <h3
+                  style={{
+                    marginBottom: rhythm(1 / 4),
+                  }}
+                >
                 <Link style={{ boxShadow: `none` }} to={node.slug}>
                   {title}
                 </Link>
