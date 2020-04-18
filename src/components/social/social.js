@@ -1,19 +1,28 @@
 import React from 'react'
-import Bio from "../../components/bio"
+import Sprite from '../../img/sprite.svg'
+import styles from './social.module.css'
 
-const subTitle = {
-  fontSize: '24px',
-  color: 'var(--white)',
-  textTransform: 'uppercase',
-  fontWeight: 'bold'
+const Social = () => {
+  
+  const socials = [
+    {id:1, link: 'https://www.youtube.com/', name: '#inst'},
+    {id:2, link: 'https://www.youtube.com/', name: '#youtube'},
+    {id:3, link: 'https://www.youtube.com/', name: '#facebook'},
+  ];
+  
+  return (
+      <ul className={styles.socialList}>
+        {socials.map((i) => <li key={i.id} >
+          <a href={i.link}>
+            <svg className={styles.icon}>
+              <use href={Sprite + i.name} />
+            </svg>
+          </a>
+        </li>)}
+      </ul>
+  
+  )
+  
 };
 
-
-
-const Subtitle = ({subtitle}) => {
-  
-  return <h3 style={subTitle}>{subtitle}</h3>
-  
-};
-
-export default Subtitle
+export default Social

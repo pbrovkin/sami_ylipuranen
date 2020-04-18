@@ -1,4 +1,3 @@
-/*basic colours*/
 #___gatsby {
   height: 100%;
 }
@@ -7,9 +6,11 @@
   height: 100%;
 }
 
+/*basic colours*/
 :root {
   --white: #ffffff;
   --black: #000000;
+  --light-blck: #393131;
   --green: #00C68B;
   --blue: #48ACFF;
 }
@@ -31,12 +32,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.wrapper {
-  width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-  position: relative;
-}
+/*.wrapper {*/
+/*  width: 100%;*/
+/*  min-height: 100%;*/
+/*  overflow: hidden;*/
+/*  position: relative;*/
+/*}*/
 
 .container {
   max-width: 1280px;
@@ -76,27 +77,4 @@ p {
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-
-/* for nailing the footer */
-
-/* .wrapper:after {
-  content: '';
-  height: 0px;
-}
- */
-
-/* .footer {
-/* width: 100%; */
-/*height: 0px;
-margin-top: -0px;
-overflow: hidden;
-} */
-
-/* for one page website */
-
- .section {
-  height: 100vh;
-  min-height: 800px;
 }

@@ -2,6 +2,7 @@
   position: fixed;
   background-color: rgba(0,0,0, .8);
   width: 100%;
+  z-index: 1001;
 }
 
 .headerContainer {
@@ -23,7 +24,7 @@
 }
 
 .item {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 
 

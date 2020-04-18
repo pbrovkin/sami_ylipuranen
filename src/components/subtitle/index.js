@@ -1,3 +1,3 @@
-import Footer from "./footer"
+import Subtitle from "./subtitle"
 
-export default Footer
+export default Subtitle

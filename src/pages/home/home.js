@@ -1,8 +1,6 @@
 import React from 'react'
-import {Link} from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import Footer from "../../components/footer"
 
 import styles from './home.module.css'
 
@@ -12,9 +10,9 @@ const Home = () => {
       <Layout>
         <div className={styles.homePage}>
           <div className={`container`}>
-            <SEO title="Terveet Tavat" />
             <div className={styles.homeContent}>
               <div className={styles.titleBlock}>
+                <SEO title="Terveet Tavat" />
                 <h1 className={styles.title}>Terveet Tavat</h1>
               </div>
               <div className={styles.descBlock}>

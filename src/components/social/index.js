@@ -1,3 +1,3 @@
-import Subtitle from "./subtitle"
+import Social from "./social"
 
-export default Subtitle
+export default Social

@@ -1,0 +1,45 @@
+.contactPage {
+  background-color: var(--light-blck);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contactContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin-top: 80px;
+}
+
+.contactBlock {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone, .email {
+  color: var(--white);
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.number, .emailAddress {
+  color: var(--green);
+}
+
+.imgBlock {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.picPerson {
+  max-width: 80%;
+  position: absolute;
+  bottom: 0;
+}

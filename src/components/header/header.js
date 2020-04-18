@@ -6,11 +6,11 @@ import styles from './header.module.css'
 const Header = ({siteTitle, menuLinks}) => (
     <header className={styles.header}>
       <div className={`container ${styles.headerContainer}`}>
-        <h1>
+        <div>
           <Link className={styles.logo} to="/">
             {siteTitle}
           </Link>
-        </h1>
+        </div>
         <div>
           <nav>
             <ul className={styles.list}>

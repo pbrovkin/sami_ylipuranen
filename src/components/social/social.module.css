@@ -1,0 +1,15 @@
+.socialList {
+  display: flex;
+  margin-top: 50px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  fill: var(--white);
+  margin-right: 30px;
+}
+
+.icon:hover {
+  fill: var(--green);
+}
