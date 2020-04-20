@@ -4,7 +4,8 @@ const sectionTitle = {
   fontSize: '28px',
   color: 'var(--white)',
   textTransform: 'uppercase',
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  borderBottom: '2px solid var(--white)'
 };
 
 

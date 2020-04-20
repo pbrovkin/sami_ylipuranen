@@ -23,10 +23,22 @@
   justify-content: center;
 }
 
+.subtitleBlock {
+  margin-bottom: 30px;
+}
+
+.innerContactBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
 .phone, .email {
   color: var(--white);
   font-weight: bold;
-  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .number, .emailAddress {
