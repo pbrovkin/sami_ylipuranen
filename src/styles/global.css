@@ -1,16 +1,16 @@
-#___gatsby {
-  height: 100%;
-}
+/*#___gatsby {*/
+/*  height: 100%;*/
+/*}*/
 
-#gatsby-focus-wrapper {
-  height: 100%;
-}
+/*#gatsby-focus-wrapper {*/
+/*  height: 100%;*/
+/*}*/
 
 /*basic colours*/
 :root {
   --white: #ffffff;
   --black: #000000;
-  --light-blck: #393131;
+  --light-black: #393131;
   --green: #00C68B;
   --blue: #48ACFF;
 }
@@ -19,6 +19,7 @@
 html {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 body {
