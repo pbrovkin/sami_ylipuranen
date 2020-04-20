@@ -1,5 +1,5 @@
 .contactPage {
-  background-color: var(--light-blck);
+  background-color: var(--light-black);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

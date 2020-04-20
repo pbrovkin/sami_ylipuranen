@@ -13,7 +13,15 @@ const footer = {
   // position: 'absolute',
   // left: '0',
   // bottom: '0',
-  marginTop: '80px'
+  // zIndex: '1000'
+};
+
+const footerContainer = {
+  width: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  height: "100%",
 };
 
 const copyrightBlock = {
@@ -35,12 +43,6 @@ const copyright = {
   fontSize: '20px',
 };
 
-const footerContainer = {
-  width: '100%',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between'
-};
 
 const logoBlock = {
   width: '33.33%',
