@@ -1,9 +1,10 @@
 .contactPage {
   background-color: var(--light-blck);
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
+  width: 100%;
 }
 
 .contactContainer {

@@ -9,3 +9,5 @@ const IndexPage = () => (
 export default IndexPage
 
 // is who consumer of IndexPage(where import)?
+// what is root component?
+// what is rendering all pages component

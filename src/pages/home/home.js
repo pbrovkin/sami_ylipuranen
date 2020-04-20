@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-
 import styles from './home.module.css'
 
 const Home = () => {
@@ -9,7 +8,8 @@ const Home = () => {
   return (
       <Layout>
         <div className={styles.homePage}>
-          <div className={`container`}>
+          <div className={`container ${styles.homeContainer}`}>
+            di
             <div className={styles.homeContent}>
               <div className={styles.titleBlock}>
                 <SEO title="Terveet Tavat" />
@@ -27,12 +27,11 @@ const Home = () => {
                   </p>
                   </span>
               </div>
-            
             </div>
           </div>
         </div>
       </Layout>
   )
-}
+};
 
 export default Home

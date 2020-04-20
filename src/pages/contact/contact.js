@@ -1,11 +1,9 @@
 import React from 'react'
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import Footer from "../../components/footer"
 import styles from './contact.module.css';
 import Subtitle from "../../components/subtitle";
 import imgPerson from '../../img/S.png'
-import Social from "../../components/social";
 
 const Contact = () => {
   
@@ -25,14 +23,12 @@ const Contact = () => {
                 </div>
               </div>
               <div className={styles.socials}>
-                <Social />
               </div>
             </div>
             <div className={styles.imgBlock}>
               <img className={styles.picPerson} src={imgPerson} alt="person" />
             </div>
           </div>
-          <Footer />
         </div>
       </Layout>
   )

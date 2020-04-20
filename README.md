@@ -1,4 +1,6 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+<h3>Install: npm i normalize.css</h3>
+<h3>Install: npm install prettier --save-dev</h3>
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />

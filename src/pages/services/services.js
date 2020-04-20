@@ -2,10 +2,13 @@ import React from 'react'
 import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import Footer from "../../components/footer"
 
 const Services = () => {
-
+    
+    const services = [
+        {}
+    ]
+    
     return (
         <Layout>
             <SEO title="Services" />
@@ -48,7 +51,6 @@ const Services = () => {
                 </ul>
                 <hr />
                 <Link to="/">← Go Home</Link>
-                <Footer />
             </div>
         </Layout>
     )
