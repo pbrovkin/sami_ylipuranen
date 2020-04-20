@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from "gatsby";
+import { Link } from "gatsby";
 import Social from "../social";
 
 const footer = {
@@ -58,23 +58,23 @@ const logo = {
 };
 
 const Footer = () => {
-  
+
   return (
-      <footer style={footer}>
-        <div className='container' style={footerContainer}>
-          <div style={socialBlock}>
-            <Social />
-          </div>
-          <div style={copyrightBlock}>
-            <div style={copyright}>© Sami Ylipuranen C</div>
-          </div>
-          <div style={logoBlock}>
-            <Link style={logo} to="/">
-              Sami Ylipuranen
-            </Link>
-          </div>
+    <footer style={footer}>
+      <div className='container' style={footerContainer}>
+        <div style={socialBlock}>
+          <Social />
         </div>
-      </footer>
+        <div style={copyrightBlock}>
+          <div style={copyright}>© Sami Ylipuranen C</div>
+        </div>
+        <div style={logoBlock}>
+          <Link style={logo} to="/">
+            Sami Ylipuranen
+            </Link>
+        </div>
+      </div>
+    </footer>
   )
 };
 

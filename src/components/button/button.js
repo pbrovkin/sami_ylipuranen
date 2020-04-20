@@ -11,6 +11,6 @@ const btn = {
   borderRadius: '5px'
 };
 
-const Button = ({label}) => <button style={btn}>{label}</button>;
+const Button = ({ label }) => <button style={btn}>{label}</button>;
 
 export default Button

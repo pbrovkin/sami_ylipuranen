@@ -8,8 +8,7 @@ const sectionTitle = {
 };
 
 
-
-const Title = ({title}) => {
+const Title = ({ title }) => {
   return <h2 style={sectionTitle}>{title}</h2>
 };
 

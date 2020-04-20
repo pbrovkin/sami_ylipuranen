@@ -54,45 +54,45 @@ const bottomLinks = {
 
 const Blogs = ({ data, location }) => {
   const [filter, setFilter] = useState('')
-  
+
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allContentfulPost.edges
-  
+
   const postsToShow = posts.filter(post => post.node.title.toLowerCase().includes(filter.toLowerCase()))
-  
+
   const handleFilterChange = (event) => {
     setFilter(event.target.value)
   }
-  
+
   return (
-      <Layout location={location} title={siteTitle}>
-        <SEO title="Blogi" />
-        <div style={Section}>
-          <h1 style={SectionTitle}>Blogi</h1>
-          <Filter value={filter} onChange={handleFilterChange} />
-          {postsToShow.map(({ node }) => {
-            const title = node.title || node.slug
-            return (
-                <article key={node.slug}>
-                  <header>
-                    <h3 >
-                      <Link style={BlogTitle} to={node.slug}>
-                        {title}
-                      </Link>
-                    </h3>
-                  </header>
-                  <section>
-                    <p style={BlogText}>{node.description}</p>
-                  </section>
-                </article>
-            )
-          })}
-          <div style={bottomLinks}>
-            <Link to="/" style={returnLink}>← Etusivu</Link>
-            <Link to="/contact" style={returnLink}>Yhteistiedot →</Link>
-          </div>
+    <Layout location={location} title={siteTitle}>
+      <SEO title="Blogi" />
+      <div style={Section}>
+        <h1 style={SectionTitle}>Blogi</h1>
+        <Filter value={filter} onChange={handleFilterChange} />
+        {postsToShow.map(({ node }) => {
+          const title = node.title || node.slug
+          return (
+            <article key={node.slug}>
+              <header>
+                <h3 >
+                  <Link style={BlogTitle} to={node.slug}>
+                    {title}
+                  </Link>
+                </h3>
+              </header>
+              <section>
+                <p style={BlogText}>{node.description}</p>
+              </section>
+            </article>
+          )
+        })}
+        <div style={bottomLinks}>
+          <Link to="/" style={returnLink}>← Etusivu</Link>
+          <Link to="/contact" style={returnLink}>Yhteistiedot →</Link>
         </div>
-      </Layout>
+      </div>
+    </Layout>
   )
 }
 

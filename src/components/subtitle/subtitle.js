@@ -9,10 +9,10 @@ const subTitle = {
 
 
 
-const Subtitle = ({subtitle}) => {
-  
+const Subtitle = ({ subtitle }) => {
+
   return <h3 style={subTitle}>{subtitle}</h3>
-  
+
 };
 
 export default Subtitle

@@ -6,7 +6,7 @@ import Subtitle from "../../components/subtitle";
 import Button from "../../components/button";
 
 const Services = () => {
-  
+
   const services = [
     {
       id: 1,
@@ -24,33 +24,33 @@ const Services = () => {
       serviceText: 'Finally take the first step towards a healthier life! With coaching, we look for the best way for you to move around and eat healthily without forgetting the pleasures. We make soft changes to your daily routine to keep healthy habits permanent. The coaching is aimed at 40+ year olds, with little or no exercise, who have awakened to the need to make a permanent change in lifestyle.'
     },
   ];
-  
+
   return (
-      <Layout>
-        <div className={styles.servicesPage}>
-          <div className={`container ${styles.servicesContainer}`}>
-            <div className={styles.titleBlock}>
-              <Title title={'Services'} />
-            </div>
-            <div className={styles.servicesBlock}>
-              <ul className={styles.list}>
-                {services.map((i) => <li key={i.id}
-                                         className={styles.item}>
-                  <div className={styles.subtitleBlock}>
-                    <Subtitle subtitle={i.subtitle} />
-                  </div>
-                  <div className={styles.textBlock}>
-                    <p>{i.serviceText}</p>
-                  </div>
-                  <div className={styles.buttonBlock}>
-                    <Button label={'Reed more'}/>
-                  </div>
-                </li>)}
-              </ul>
-            </div>
+    <Layout>
+      <div className={styles.servicesPage}>
+        <div className={`container ${styles.servicesContainer}`}>
+          <div className={styles.titleBlock}>
+            <Title title={'Services'} />
+          </div>
+          <div className={styles.servicesBlock}>
+            <ul className={styles.list}>
+              {services.map((i) => <li key={i.id}
+                className={styles.item}>
+                <div className={styles.subtitleBlock}>
+                  <Subtitle subtitle={i.subtitle} />
+                </div>
+                <div className={styles.textBlock}>
+                  <p>{i.serviceText}</p>
+                </div>
+                <div className={styles.buttonBlock}>
+                  <Button label={'Reed more'} />
+                </div>
+              </li>)}
+            </ul>
           </div>
         </div>
-      </Layout>
+      </div>
+    </Layout>
   )
 };
 
