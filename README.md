@@ -1,4 +1,5 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+<h2>DEMO: http://vague-food.surge.sh/blogs/>
 <h3>Install: npm i normalize.css</h3>
 <p align="center">
   <a href="https://www.gatsbyjs.org">
