@@ -5,11 +5,25 @@ import SEO from "../components/seo/seo"
 import Footer from "../components/footer"
 import { rhythm } from "../utils/typography"
 
+
+function returnImgTagOrVideo(url) {
+  let fileExt = url.substring(url.lastIndexOf(".") + 1, url.length) || url
+  if (fileExt === "jpg" || fileExt === "jpeg" || fileExt === "png" || fileExt === "gif") {
+    return <img src={"https:" + url} alt="blog" />
+  } else if (fileExt === "mp4") {
+    return (
+      <video width="100%" src={"https:" + url} loop autoPlay muted playsInline></video>
+    )
+  } else {
+    return "invalid media"
+  }
+}
+
 const BlogPostContentfulTemplate = ({ data, pageContext, location }) => {
   const post = data.contentfulPost
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
-
+  console.log(post.media.file.url);
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -36,7 +50,8 @@ const BlogPostContentfulTemplate = ({ data, pageContext, location }) => {
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.content.childContentfulRichText.html }} />
-        <img src={"https:" + post.media.file.url} alt="blogimage" />
+        <>{returnImgTagOrVideo(post.media.file.url)}</>
+        {/* <img src={"https:" + post.media.file.url} alt="blogimage" /> */}
         <hr
           style={{
             marginBottom: rhythm(1),
