@@ -4,18 +4,17 @@ import SEO from "../../components/seo"
 import styles from './home.module.css'
 
 const Home = () => {
-
+  
   return (
-    <Layout>
-      <div className={styles.homePage}>
-        <div className={`container ${styles.homeContainer}`}>
-          di
+      <Layout>
+        <div className={styles.homePage}>
+          <div className={`container ${styles.homeContainer}`}>
             <div className={styles.homeContent}>
-            <div className={styles.titleBlock}>
-              <SEO title="Terveet Tavat" />
-              <h1 className={styles.title}>Terveet Tavat</h1>
-            </div>
-            <div className={styles.descBlock}>
+              <div className={styles.titleBlock}>
+                <SEO title="Terveet Tavat" />
+                <h1 className={styles.title}>Terveet Tavat</h1>
+              </div>
+              <div className={styles.descBlock}>
               <span className={styles.descText}>
                 <p>
                   Terveet tavat on hyvinvointisivusto, jonka tarkoituksena on
@@ -26,11 +25,11 @@ const Home = () => {
                   saada muutoksen aikaan.
                   </p>
               </span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
   )
 };
 

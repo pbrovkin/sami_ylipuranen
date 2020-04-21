@@ -3,7 +3,6 @@ import Layout from "../../components/layout"
 import Title from "../../components/title";
 import styles from './services.module.css'
 import Subtitle from "../../components/subtitle";
-import Button from "../../components/button";
 
 const Services = () => {
   
@@ -32,19 +31,39 @@ const Services = () => {
             <div className={styles.titleBlock}>
               <Title title={'Services'} />
             </div>
+            <div className={styles.servicesWelcome}>
+              <p>Tervetuloa treenamaan verkossa
+                <a className={styles.linkSyke}
+                   href="https://syketribe.fi"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Syke-tribe</a>
+                 sovelluksen kautta. Napsauta
+                <a className={styles.linkSyke}
+                   href="https://syketribe.fi/clientsignup/5292bb73b5a0303d17245ccc7f18ffd2?s"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  liity nyt</a>
+                 saadaksesi tietosi, että sinusta tulee online-asiakas. Muista valita
+                 verkkoharjoittelupaketti esim.
+                 "Vahva aamu / 8 vko" ja lisätä se lomakkeen lopussa olevaan "Vapaa sana" kenttään.
+              </p>
+            </div>
             <div className={styles.servicesBlock}>
               <ul className={styles.list}>
                 {services.map((i) => <li key={i.id}
                                          className={styles.item}>
-                  <div className={styles.subtitleBlock}>
-                    <Subtitle subtitle={i.subtitle} />
-                  </div>
-                  <div className={styles.textBlock}>
-                    <p>{i.serviceText}</p>
-                  </div>
-                  <div className={styles.buttonBlock}>
-                    <Button label={'Reed more'} />
-                  </div>
+                  <a className={styles.servicesLink}
+                     href="https://syketribe.fi/clientsignup/5292bb73b5a0303d17245ccc7f18ffd2?s"
+                     target="_blank"
+                     rel="noopener noreferrer">
+                    <div className={styles.subtitleBlock}>
+                      <Subtitle subtitle={i.subtitle} />
+                    </div>
+                    <div className={styles.textBlock}>
+                      <p>{i.serviceText}</p>
+                    </div>
+                  </a>
                 </li>)}
               </ul>
             </div>
