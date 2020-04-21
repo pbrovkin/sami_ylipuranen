@@ -1,8 +1,6 @@
-const dotenv = require('dotenv')
-
-if (process.env.NODE_ENV !== 'production') {
-  dotenv.config()
-}
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 
 module.exports = {
@@ -104,7 +102,7 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `az44re8kag24`,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       }
     },
