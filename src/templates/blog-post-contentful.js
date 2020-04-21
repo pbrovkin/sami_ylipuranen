@@ -36,6 +36,7 @@ const BlogPostContentfulTemplate = ({ data, pageContext, location }) => {
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.content.childContentfulRichText.html }} />
+        <img src={"https:" + post.media.file.url} alt="blogimage" />
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -90,6 +91,12 @@ export const pageQuery = graphql`
       content {
         childContentfulRichText {
           html
+        }
+      }
+      media {
+        file {
+          url
+          contentType
         }
       }
     }
