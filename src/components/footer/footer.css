@@ -9,7 +9,7 @@
     position: bottom;
     left: 0;
     bottom: 0;
-    zIndex: 1000;
+    z-index: 1000;
 }
 
 .footer-container {
@@ -24,19 +24,20 @@
     width: 33.33%;
     display: flex;
     justify-content: space-between;
-    alignItems: center;
+    align-items: center;
 }
 
 .social-block {
     width: 33.33%;
     display: flex;
     justify-content: center;
-    alignItems: center;
+    align-items: center;
 }
 
 .copyright {
     color: var(--white);
     font-size: 1.25rem;
+    text-align: center;
 }
 
 /* const logoBlock= {
@@ -52,7 +53,7 @@ logo {
     color: var(--green);
 } */
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
     .footer {
         padding: 0;
     }

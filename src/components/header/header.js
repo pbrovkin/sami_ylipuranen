@@ -6,7 +6,7 @@ import styles from './header.module.css'
 const Header = ({ siteTitle, menuLinks }) => (
   <header className={styles.header}>
     <div className={`container ${styles.headerContainer}`}>
-      <div>
+      <div className={styles.logoBlock}>
         <Link className={styles.logo} to="/">
           {siteTitle}
         </Link>

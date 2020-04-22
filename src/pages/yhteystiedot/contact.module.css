@@ -1,5 +1,5 @@
 .contactPage {
-  background-color: #F5F5F5;
+  background-color: var(--smoke);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -62,7 +62,7 @@
   bottom: 0;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .contactBlock {
     width: 60%;
   }
