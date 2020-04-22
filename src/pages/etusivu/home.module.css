@@ -52,6 +52,13 @@
   justify-content: flex-end;
 }
 
+@media (min-width: 1024px) {
+  .homeContent {
+    padding: 2.5rem;
+    max-width: 63.75rem;
+    height: 31.25rem;
+  }
+}
 
 @media (max-width: 768px) {
   .homeContent {
@@ -103,10 +110,3 @@
   }
 }
 
-@media (min-width: 1024px) {
-  .homeContent {
-    padding: 2.5rem;
-    max-width: 63.75rem;
-    height: 31.25rem;
-  }
-}

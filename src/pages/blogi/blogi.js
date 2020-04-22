@@ -1,5 +1,5 @@
-import React, { useState }  from "react"
-import {graphql} from "gatsby"
+import React, {useState} from "react"
+import {Link, graphql} from "gatsby"
 import Layout from "../../components/layout"
 import styles from "./blog.module.css";
 import Title from "../../components/title";
@@ -10,81 +10,69 @@ import imgBlog from '../../img/blog-block-left.png'
 import Filter from "../../components/filter";
 
 
-const Blogi = ({data, location}) => {
+const Blog = ({data, location}) => {
   
   const [filter, setFilter] = useState('');
   
-  // const siteTitle = data.site.siteMetadata.title
-  // const posts = data.allContentfulPost.edges
+  const posts = data.allContentfulPost.edges
   
-  const post = [
-    {
-      id: 1,
-      title: '1Some Blog',
-      descText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore doloribus eos ipsam, laborenisi placeat possimus repellendus'
-    },
-    {
-      id: 2,
-      title: '2Some Blog',
-      descText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore doloribus eos ipsam, laborenisi placeat possimus repellendus'
-    },
-    {
-      id: 3,
-      title: '3Some Blog3',
-      descText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore doloribus eos ipsam, laborenisi placeat possimus repellendus'
-    },
-    {
-      id: 4,
-      title: 'Some Blog4',
-      descText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore doloribus eos ipsam, laborenisi placeat possimus repellendus'
-    },
-  ];
-  
-  const postsToShow = post.filter(post => post.title.toLowerCase().includes(filter.toLowerCase()))
+  const postsToShow = posts.filter(post => post.node.title.toLowerCase().includes(filter.toLowerCase()))
   
   const handleFilterChange = (event) => {
     setFilter(event.target.value)
   };
   
   
-  
   return (
       <>
-        <Layout>
+        <Layout location={location}>
           <div className={styles.blogPage}>
             <div className={`container ${styles.blogContainer}`}>
               <div className={styles.titleBlock}>
-                <Title title={'Blogi'} />
+                <Title title={'My Blog'} />
+              </div>
+              <div className={styles.filterBlock}>
+                <Filter onChange={handleFilterChange} value={filter} />
+              </div>
+              <div className={styles.subscrBlock}>
+                {/*<Button label={'Subscribe'}/>*/}
               </div>
               <div className={styles.blogBlock}>
-              <Filter onChange={handleFilterChange} value={filter}/>
                 <ul className={styles.list}>
-                  {postsToShow.map(i => <li key={i.id} className={styles.item}>
-                        <div className={styles.imgBlog}>
-                          <div className={styles.imgContainer}>
-                            <img className={styles.blogImg} src={imgBlog} alt="img" />
-                          </div>
-                        </div>
-                        <div className={styles.entriesBlog}>
-                          <div className={styles.timeBlog}>
-                            <svg className={styles.iconClock}>
-                              <use href={Sprite + '#clock'} />
-                            </svg>
-                            <div className={styles.date}>
-                              April 13, 2020
-                            </div>
-                          </div>
-                          <div className={styles.subtitleBlock}>
-                            <Subtitle subtitle={i.title} />
-                          </div>
-                          <div className={styles.entriesText}>
-                            <p>{i.descText}</p>
-                          </div>
-                          <div className={styles.entriesButton}>
-                            <Button label={'Lue lisää'} />
-                          </div>
-                        </div>
-                      </li>
+                  {postsToShow.map(({node}) => {
+                        const title = node.title || node.slug;
+                        
+                        return (
+                            <li key={node.slug} className={styles.item}>
+                              <div className={styles.imgBlock}>
+                                <div className={styles.imgContainer}>
+                                  <img className={styles.blogImg} src={imgBlog} alt="img" />
+                                </div>
+                              </div>
+                              <div className={styles.entriesBlog}>
+                                <div className={styles.timeBlog}>
+                                  <svg className={styles.iconClock}>
+                                    <use href={Sprite + '#clock'} />
+                                  </svg>
+                                  <div className={styles.date}>
+                                    April 13, 2020
+                                  </div>
+                                </div>
+                                <div className={styles.subtitleBlock}>
+                                  <Subtitle subtitle={title} />
+                                </div>
+                                <div className={styles.entriesText}>
+                                  <p>{node.description}</p>
+                                </div>
+                                <div className={styles.entriesButton}>
+                                  <Link to={node.slug}>
+                                    <Button label={'Reed more'} />
+                                  </Link>
+                                </div>
+                              </div>
+                            </li>
+                        )
+                      }
                   )}
                 </ul>
               </div>
@@ -95,7 +83,7 @@ const Blogi = ({data, location}) => {
   )
 };
 
-export default Blogi
+export default Blog
 
 export const pageQuery = graphql`
   query {
@@ -116,4 +104,3 @@ export const pageQuery = graphql`
     }
   }
 `
-

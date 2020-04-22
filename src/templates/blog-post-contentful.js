@@ -43,7 +43,6 @@ const BlogPostContentfulTemplate = ({ data, pageContext, location }) => {
           </li>
         </ul>
       </nav>
-      <Footer />
     </Layout>
   )
 }
