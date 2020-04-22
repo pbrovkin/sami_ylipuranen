@@ -2,20 +2,20 @@ import React from 'react'
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import styles from './contact.module.css';
-import Subtitle from "../../components/subtitle";
+import Title from "../../components/Title";
 import imgPerson from '../../img/S.png'
 
-const Contact = () => {
+const Yhteystiedot = () => {
   
   return (
       <Layout>
-        <SEO title="Contact" />
+        <SEO title="yhteystiedot" />
         <div className={styles.contactPage}>
           <div className={`container ${styles.contactContainer}`}>
             <div className={styles.contactBlock}>
               <div className={styles.innerContactBlock}>
-                <div className={styles.subtitleBlock}>
-                  <Subtitle subtitle={'Contact info'} />
+                <div className={styles.titleBlock}>
+                  <Title title={'yhteystiedot'} />
                 </div>
                 <div>
                   <div className={styles.phone}>
@@ -25,11 +25,10 @@ const Contact = () => {
                     <p>Email: <span className={styles.emailAddress}>info@terveettavat.fi</span></p>
                   </div>
                 </div>
-              
               </div>
             </div>
             <div className={styles.imgBlock}>
-              <img className={styles.picPerson} src={imgPerson} alt="person" />
+              <img className={styles.picPerson} src={imgPerson} alt="Sami Ylipuranen" />
             </div>
           </div>
         </div>
@@ -37,4 +36,4 @@ const Contact = () => {
   )
 };
 
-export default Contact
+export default Yhteystiedot

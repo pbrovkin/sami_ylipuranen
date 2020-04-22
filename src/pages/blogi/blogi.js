@@ -1,5 +1,5 @@
 import React, { useState }  from "react"
-import {Link, graphql} from "gatsby"
+import {graphql} from "gatsby"
 import Layout from "../../components/layout"
 import styles from "./blog.module.css";
 import Title from "../../components/title";
@@ -10,7 +10,7 @@ import imgBlog from '../../img/blog-block-left.png'
 import Filter from "../../components/filter";
 
 
-const Blog = ({data, location}) => {
+const Blogi = ({data, location}) => {
   
   const [filter, setFilter] = useState('');
   
@@ -50,23 +50,14 @@ const Blog = ({data, location}) => {
   
   return (
       <>
-        <Filter onChange={handleFilterChange} value={filter}/>
         <Layout>
           <div className={styles.blogPage}>
             <div className={`container ${styles.blogContainer}`}>
               <div className={styles.titleBlock}>
-                <Title title={'My Blog'} />
-              </div>
-              <div className={styles.loginBlock}>
-                <Link to="/blogs" className={styles.login}
-                    /*activeClassName={styles.activeLogin}*/>Log In</Link>
-                <div className={styles.imgBlock}>
-                  <svg className={styles.iconLock}>
-                    <use href={Sprite + '#lock'} />
-                  </svg>
-                </div>
+                <Title title={'Blogi'} />
               </div>
               <div className={styles.blogBlock}>
+              <Filter onChange={handleFilterChange} value={filter}/>
                 <ul className={styles.list}>
                   {postsToShow.map(i => <li key={i.id} className={styles.item}>
                         <div className={styles.imgBlog}>
@@ -90,7 +81,7 @@ const Blog = ({data, location}) => {
                             <p>{i.descText}</p>
                           </div>
                           <div className={styles.entriesButton}>
-                            <Button label={'Reed more'} />
+                            <Button label={'Lue lisää'} />
                           </div>
                         </div>
                       </li>
@@ -104,7 +95,7 @@ const Blog = ({data, location}) => {
   )
 };
 
-export default Blog
+export default Blogi
 
 export const pageQuery = graphql`
   query {

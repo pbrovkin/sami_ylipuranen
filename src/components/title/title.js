@@ -2,10 +2,9 @@ import React from 'react'
 
 const sectionTitle = {
   fontSize: '28px',
-  color: 'var(--white)',
+  color: 'var(--black)',
   textTransform: 'uppercase',
   fontWeight: 'bold',
-  borderBottom: '2px solid var(--white)'
 };
 
 

@@ -1,6 +1,6 @@
-import Blogs from "./blogs"
+import Blogi from "./blogi"
 
-export default Blogs
+export default Blogi
 
 export const pageQuery = graphql`
   query {

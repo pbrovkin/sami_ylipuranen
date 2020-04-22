@@ -12,7 +12,7 @@ const Filter = ({value, onChange}) => {
               onChange={onChange}
               className={styles.inputBlog}
               type="text"
-              placeholder="Type Blog Name..."
+              placeholder="Etsi blogin otsikko..."
           />
           <div className={styles.imgBlock}>
             <svg className={styles.iconMagnifier}>

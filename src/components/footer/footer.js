@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "gatsby";
+//import { Link } from "gatsby";
 import Social from "../social";
 
 const footer = {
@@ -20,7 +20,7 @@ const footerContainer = {
   width: '100%',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-between',
+  justifyContent: 'space-evenly',
   height: "100%",
 };
 
@@ -44,18 +44,18 @@ const copyright = {
 };
 
 
-const logoBlock = {
-  width: '33.33%',
-  display: 'flex',
-  justifyContent: 'flex-end',
-  alignItems: 'center',
-};
+// const logoBlock = {
+//   width: '33.33%',
+//   display: 'flex',
+//   justifyContent: 'flex-end',
+//   alignItems: 'center',
+// };
 
-const logo = {
-  fontSize: '32px',
-  fontWeight: 'bold',
-  color: 'var(--blue)',
-};
+// const logo = {
+//   fontSize: '32px',
+//   fontWeight: 'bold',
+//   color: 'var(--green)',
+// };
 
 const Footer = () => {
 
@@ -66,12 +66,7 @@ const Footer = () => {
           <Social />
         </div>
         <div style={copyrightBlock}>
-          <div style={copyright}>© Sami Ylipuranen C</div>
-        </div>
-        <div style={logoBlock}>
-          <Link style={logo} to="/">
-            Sami Ylipuranen
-            </Link>
+          <div style={copyright}>© Sami Ylipuranen</div>
         </div>
       </div>
     </footer>

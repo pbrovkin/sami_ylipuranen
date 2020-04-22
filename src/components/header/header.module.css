@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  background-color: rgba(0,0,0, .8);
+  background-color: rgba(0, 0, 0, .8);
   width: 100%;
   z-index: 1001;
 }
@@ -14,9 +14,10 @@
 }
 
 .logo {
-  color: var(--blue);
+  color: var(--green);
   font-weight: bold;
   font-size: 32px;
+  text-transform: uppercase;
 }
 
 .list {

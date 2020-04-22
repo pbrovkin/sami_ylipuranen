@@ -1,8 +1,8 @@
 import React from 'react'
 
 const subTitle = {
-  fontSize: '22px',
-  color: 'var(--red)',
+  fontSize: '1.2rem',
+  color: 'var(--green)',
   textTransform: 'uppercase',
   fontWeight: 'bold'
 };

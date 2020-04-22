@@ -1,9 +1,9 @@
 import React from "react"
-import Home from "../pages/home"
+import Etusivu from "./etusivu"
 
 
 const IndexPage = () => (
-  <Home />
+  <Etusivu />
 );
 
 export default IndexPage

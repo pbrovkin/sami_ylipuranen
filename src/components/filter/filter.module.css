@@ -17,23 +17,25 @@
   width: 100%;
   padding: 10px;
   outline: none;
-  border: 2px solid var(--red);
-  color: var(--red);
+
+  color: rgba(0, 0, 0, .8);
   transition: all .3s;
-  font-weight: bold;
+
   border-radius: 5px;
 }
 
-::-webkit-input-placeholder { /* Edge */
-  color: var(--red);
+::-webkit-input-placeholder {
+  /* Edge */
+  color: vrgba(0, 0, 0, .8);
   opacity: 0.7;
   font-weight: normal;
   font-style: italic;
 
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: var(--red);
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(0, 0, 0, .8);
   opacity: 0.7;
   font-weight: normal;
   font-style: italic;
@@ -41,7 +43,7 @@
 
 .inputBlog:focus {
 
-  box-shadow: 0 0 10px 5px var(--white);
+  box-shadow: 0 0 1px 1px var(--white);
 }
 
 .imgBlock {
@@ -56,5 +58,5 @@
 .iconMagnifier {
   width: 25px;
   height: 25px;
-  fill: var(--red);
+  fill: rgba(0, 0, 0, .8);
 }

@@ -1,29 +1,31 @@
-require("dotenv").config()
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
-    title: `Sami Ylipuranen`,
+    title: `Terveet Tavat`,
     menuLinks: [
       {
-        name: 'Home',
+        name: 'Etusivu',
         link: '/'
       },
       {
-        name: 'Services',
-        link: '/services'
+        name: 'Verkkovalmennus',
+        link: '/verkkovalmennus'
       },
       {
-        name: 'Blogs',
-        link: '/blogs'
+        name: 'Blogi',
+        link: '/blogi'
       },
       {
-        name: 'Contact',
-        link: '/contact'
+        name: 'Yhteystiedot',
+        link: '/yhteystiedot'
       }
     ],
     author: {
       name: `Sami Ylipuranen`,
-      summary: `personal trainer, lives and works in Helsinki.`,
+      summary: `Valmentaja`,
     },
     description: `Personal trainer website.`,
     siteUrl: `http://localhost:8000/`,
@@ -32,6 +34,15 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Montserrat","Lato"],
+          urls: ["./static/fonts/font.css"],
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -64,8 +75,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+        spaceId: `az44re8kag24`,
+        accessToken:`N8O-4Vq0O89bBs0sOTcq_3ZRLIoa4-RCuxapcEYxQSM`
       }
     },
     `gatsby-transformer-sharp`,
@@ -90,5 +101,8 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `@contentful/gatsby-transformer-contentful-richtext`,
+  
+   
   ],
+  
 }
