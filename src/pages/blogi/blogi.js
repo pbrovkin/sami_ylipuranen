@@ -8,6 +8,7 @@ import Button from "../../components/button";
 import Sprite from '../../img/sprite.svg'
 import imgBlog from '../../img/blog-block-left.png'
 import Filter from "../../components/filter";
+import Subscription from "../../components/Subscription/BlogSubscription"
 
 
 const Blogi = ({data, location}) => {
@@ -88,6 +89,7 @@ const Blogi = ({data, location}) => {
                   )}
                 </ul>
               </div>
+        <Subscription/>
             </div>
           </div>
         </Layout>
