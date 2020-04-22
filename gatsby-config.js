@@ -73,6 +73,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: "https://gmail.us4.list-manage.com/subscribe/post?u=5f53e9e0425e25be4ef97729a&amp;id=f7a1734428",
+      },
+    },
+    'gatsby-plugin-sass',
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `az44re8kag24`,
@@ -106,3 +113,7 @@ module.exports = {
   ],
   
 }
+
+
+
+
