@@ -57,6 +57,7 @@ const Blogi = ({data, location}) => {
               <div className={styles.titleBlock}>
                 <Title title={'Blogi'} />
               </div>
+              <Subscription/>
               <div className={styles.blogBlock}>
               <Filter onChange={handleFilterChange} value={filter}/>
                 <ul className={styles.list}>
@@ -89,7 +90,7 @@ const Blogi = ({data, location}) => {
                   )}
                 </ul>
               </div>
-        <Subscription/>
+        
             </div>
           </div>
         </Layout>
