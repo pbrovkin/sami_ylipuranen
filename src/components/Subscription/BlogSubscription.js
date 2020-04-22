@@ -5,7 +5,8 @@ import  formStyles from '../Subscription/Subscription.module.scss'
 export default class Subscription extends React.Component {
     state = {
         email:'',
-        name:''
+        name:'',
+        isSubscribed:false
         
     }
 
@@ -21,7 +22,7 @@ export default class Subscription extends React.Component {
     
         addToMailchimp(this.state.email,{NAME:this.state.name})
         .then(data=>{
-         
+         this.state.isSubscribed=true
           console.log(data);
          
         })
