@@ -24,7 +24,7 @@ const Etusivu = () => {
               </div>
               <div className={styles.descBlock}>
               <span className={styles.descText}>
-                <p>“Projektit päättyvät, tavat säilyvät”</p>
+                <p><em>“Projektit päättyvät, tavat säilyvät”</em></p>
               </span>
               </div>
             </div>

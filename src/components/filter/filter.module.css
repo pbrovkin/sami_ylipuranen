@@ -1,11 +1,11 @@
 .formBlog {
   position: fixed;
   z-index: 1010;
-  top: 22px;
+  top: 1.375rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  width: 350px;
+  width: 21.875rem;
 }
 
 .formBlock {
@@ -15,7 +15,7 @@
 
 .inputBlog {
   width: 100%;
-  padding: 10px;
+  padding: .625rem;
   outline: none;
 
   color: rgba(0, 0, 0, .8);
@@ -48,7 +48,7 @@
 
 .imgBlock {
   position: absolute;
-  right: 10px;
+  right: .625rem;
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
@@ -56,7 +56,7 @@
 }
 
 .iconMagnifier {
-  width: 25px;
-  height: 25px;
+  width: 1.5625rem;
+  height: 1.5625rem;
   fill: rgba(0, 0, 0, .8);
 }

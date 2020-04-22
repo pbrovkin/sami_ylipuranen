@@ -28,7 +28,7 @@ body {
   width: 100%;
   height: 100%;
   line-height: 1.42;
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-family: 'Montserrat', 'Lato';
   /* to smooth fonts */
   -webkit-font-smoothing: antialiased;
@@ -43,9 +43,9 @@ body {
 /*}*/
 
 .container {
-  max-width: 1280px;
+  max-width: 80rem;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 
 ul {
