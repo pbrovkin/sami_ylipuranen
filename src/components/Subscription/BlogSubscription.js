@@ -38,7 +38,7 @@ export default class Subscription extends React.Component {
             <div>
                 <div>
                 {
-                            this.state.isSubscribed ===true ? <Greeting/> :
+                            this.state.isSubscribed ===true ? <Greeting name={this.state.name}/> :
                     <form className={formStyles.EmailListForm}  onSubmit={this._handleSubmit} >
                    <label>Email</label> 
                     <input
