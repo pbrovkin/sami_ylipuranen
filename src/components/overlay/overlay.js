@@ -1,7 +1,6 @@
 import React from 'react'
-import styles from "./overlay.module.css";
+import "./overlay.css";
 import {Link} from "gatsby";
-import '../../styles/global.css'
 
 const Overlay = ({clazz, setClass}) => {
   
@@ -30,23 +29,23 @@ const Overlay = ({clazz, setClass}) => {
   
   return (
       <div className={`${clazz}`}>
-        <div className={styles.overlayContainer}>
-          <div className={styles.top}>
-            <div className={styles.logoBlock}>
-              <Link className={styles.logo} to="/">
+        <div className='overlayContainer'>
+          <div className='top'>
+            <div className='logoBlock'>
+              <Link className='logo' to="/">
                 Terveet Tavat
               </Link>
             </div>
-            <div className={styles.btnBlock}>
-              <div onClick={() => onChangeClass()} className={styles.btnClosed}>X</div>
+            <div className='btnBlock'>
+              <div onClick={() => onChangeClass()} className='btnClosed'>X</div>
             </div>
           </div>
-          <div className={styles.navBlock}>
-            <nav className={styles.nav}>
-              <ul className={styles.list}>
+          <div className='navBlock'>
+            <nav className='nav'>
+              <ul className='list'>
                 {menuLinks.map(link => (
-                    <li className={styles.item} key={link.name}>
-                      <Link className={styles.link} activeClassName={styles.activeLink} to={link.link}>
+                    <li className='item' key={link.name}>
+                      <Link className='link' activeClassName='activeLink' to={link.link}>
                         {link.name}
                       </Link>
                     </li>

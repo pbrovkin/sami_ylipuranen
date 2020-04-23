@@ -1,3 +1,16 @@
+.overlay {
+  display: none;
+}
+
+.overlayDisplay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .85);
+  z-index: 2000;
+  display: block;
+}
+
 .overlayContainer {
   height: 100%;
   display: flex;
@@ -29,7 +42,7 @@
   font-weight: bold;
   font-size: 2.5rem;
   cursor: pointer;
-  padding-right: .8rem;
+  padding-right: .4rem;
 }
 
 .list {
@@ -49,7 +62,7 @@
 }
 
 .item {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .link {
@@ -71,9 +84,16 @@
   border-bottom: 1px solid var(--green);
 }
 
+/*@media (min-width: 768px) {*/
+/*  .overlayDisplay {*/
+/*    display: none;*/
+/*  }*/
+/*}*/
+
 @media (max-width: 768px) {
   .link {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
   }
 }
 
@@ -83,11 +103,19 @@
   }
 
   .link {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .logoBlock {
+    margin-top: .3rem;
   }
 
   .logo {
     font-size: 1.1rem;
+  }
 
+  .btnClosed {
+    font-size: 2rem;
   }
 }
