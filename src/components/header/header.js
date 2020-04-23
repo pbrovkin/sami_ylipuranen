@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styles from './header.module.css'
+import Hamburger from "../hamburger-menu";
 
 
 const Header = ({ siteTitle, menuLinks }) => (
@@ -11,7 +12,7 @@ const Header = ({ siteTitle, menuLinks }) => (
           {siteTitle}
         </Link>
       </div>
-      <div>
+      <div className={styles.navBlock}>
         <nav>
           <ul className={styles.list}>
             {menuLinks.map(link => (
@@ -23,6 +24,9 @@ const Header = ({ siteTitle, menuLinks }) => (
             ))}
           </ul>
         </nav>
+        <div className={styles.hamburgerBLock}>
+          <Hamburger/>
+        </div>
       </div>
     </div>
   </header>
