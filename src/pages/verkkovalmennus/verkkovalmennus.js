@@ -3,7 +3,6 @@ import Layout from "../../components/layout"
 import Title from "../../components/title";
 import styles from './services.module.css'
 import Subtitle from "../../components/subtitle";
-import Overlay from "../../components/overlay";
 
 const Verkkovalmennus = () => {
   
@@ -41,7 +40,6 @@ const Verkkovalmennus = () => {
   
   return (
       <Layout>
-        <Overlay />
         <div className={styles.servicesPage}>
           <div className={`container ${styles.servicesContainer}`}>
             <div className={styles.titleBlock}>

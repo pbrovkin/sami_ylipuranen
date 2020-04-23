@@ -1,13 +1,17 @@
-import React from "react"
+import React, {useState} from "react"
 import { Link } from "gatsby"
 import styles from './header.module.css'
 import Hamburger from "../hamburger-menu";
+import Overlay from "../overlay";
 
 
 const Header = ({ siteTitle, menuLinks }) => {
   
+  const [clazz, setClass] = useState('overlay');
+  
   return (
       <header className={styles.header}>
+        <Overlay clazz={clazz} setClass={setClass}/>
         <div className={`container ${styles.headerContainer}`}>
           <div className={styles.logoBlock}>
             <Link className={styles.logo} to="/">
@@ -27,7 +31,7 @@ const Header = ({ siteTitle, menuLinks }) => {
               </ul>
             </nav>
             <div className={styles.hamburgerBLock}>
-              <Hamburger />
+              <Hamburger setClass={setClass} />
             </div>
           </div>
         </div>

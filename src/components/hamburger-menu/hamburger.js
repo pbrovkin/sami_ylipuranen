@@ -1,11 +1,15 @@
 import React from 'react'
 import styles from './hamburger.module.css'
 
-const Hamburger = () => {
+const Hamburger = ({setClass}) => {
+  
+  const onChangeClass = () => {
+    setClass('overlayDisplay')
+  };
   
   return (
       <>
-        <ul className={styles.list}>
+        <ul onClick={() => onChangeClass()} className={styles.list}>
           <li className={styles.item}></li>
           <li className={styles.item}></li>
           <li className={styles.item}></li>

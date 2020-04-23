@@ -82,3 +82,16 @@ p {
 *::after {
   box-sizing: border-box;
 }
+
+.overlay {
+  display: none;
+}
+
+.overlayDisplay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 2000;
+  display: block;
+}

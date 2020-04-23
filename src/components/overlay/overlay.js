@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from "./overlay.module.css";
 import {Link} from "gatsby";
+import '../../styles/global.css'
 
-const Overlay = () => {
+const Overlay = ({clazz, setClass}) => {
   
   const menuLinks = [
     {
@@ -23,8 +24,12 @@ const Overlay = () => {
     }
     ];
   
+  const onChangeClass = () => {
+    setClass('overlay')
+  };
+  
   return (
-      <div className={styles.overlay}>
+      <div className={`${clazz}`}>
         <div className={styles.overlayContainer}>
           <div className={styles.top}>
             <div className={styles.logoBlock}>
@@ -33,7 +38,7 @@ const Overlay = () => {
               </Link>
             </div>
             <div className={styles.btnBlock}>
-              <div className={styles.btnClosed}>X</div>
+              <div onClick={() => onChangeClass()} className={styles.btnClosed}>X</div>
             </div>
           </div>
           <div className={styles.navBlock}>
