@@ -6,7 +6,7 @@ import formStyles from './subscription.module.css'
     return (
        <div className={formStyles.greeting}>
          
-            <h1>Thank you {props.name}, for Subscribing</h1>
+            <h1>Thanks for signing up,{props.name}!</h1>
             <p>You'll be getting my information about blogs in your inbox.</p>
            {/* <Link to='/blogi'> <button >Go Back</button></Link> */}
        </div>
