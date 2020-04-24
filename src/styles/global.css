@@ -1,14 +1,7 @@
-/*#___gatsby {*/
-/*  height: 100%;*/
-/*}*/
-
-/*#gatsby-focus-wrapper {*/
-/*  height: 100%;*/
-/*}*/
-
 /*basic colours*/
 :root {
   --white: #ffffff;
+  --smoke: #F5F5F5;
   --black: #000000;
   --light-black: #393131;
   --green: #00C68B;
@@ -29,7 +22,7 @@ body {
   height: 100%;
   line-height: 1.42;
   font-size: 1.0625rem;
-  font-family: 'Montserrat', 'Lato';
+  font-family: 'Montserrat', 'Lato', sans-serif;
   /* to smooth fonts */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
