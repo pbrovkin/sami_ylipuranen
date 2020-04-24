@@ -8,7 +8,7 @@ import Button from "../../components/button";
 import Sprite from '../../img/sprite.svg'
 import imgBlog from '../../img/blog-block-left.png'
 import Filter from "../../components/filter";
-import Subscription from "../../components/Subscription/BlogSubscription"
+import Subscription from "../../components/subscription/blogSubscription"
 
 
 const Blogi = ({data, location}) => {
