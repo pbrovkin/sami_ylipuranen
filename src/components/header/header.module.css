@@ -13,11 +13,19 @@
   padding: 0 2.5rem;
 }
 
+.logoBlock {
+  text-align: center;
+}
+
 .logo {
   color: var(--green);
   font-weight: bold;
   font-size: 2rem;
   text-transform: uppercase;
+}
+
+.navBlock {
+
 }
 
 .list {
@@ -47,9 +55,41 @@
   border-bottom: 1px solid var(--green);
 }
 
-@media (max-width: 375px) {
+.hamburgerBLock {
+  display: none;
+}
+
+@media (max-width: 1024px) {
   .logo {
+    font-size: 1.5rem;
+  }
+
+  .link {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .link {
+    font-size: 1rem;
+  }
+
+  .item {
+    margin-right: 1rem;
+  }
+
+  .hamburgerBLock {
+    display: block;
+  }
+
+  .nav {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.1rem;
   }
 
   .link {
@@ -63,18 +103,9 @@
   .headerContainer {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     height: 4rem;
-    padding: 0 1rem;
   }
 }
 
-@media (min-width: 768px) {
-  .logo {
-    font-size: 1.1rem;
-  }
 
-  .link {
-    font-size: 1rem;
-  }
-}
+

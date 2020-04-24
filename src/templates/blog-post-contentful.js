@@ -1,52 +1,73 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import {Link, graphql} from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo/seo"
-import Footer from "../components/footer"
+import '../styles/global.css'
+import styles from './blog-post-contentfull.module.css'
 
-const BlogPostContentfulTemplate = ({ data, pageContext, location }) => {
+
+// function returnImgTagOrVideo(url) {
+//   let fileExt = url.substring(url.lastIndexOf(".") + 1, url.length) || url
+//   if (fileExt === "jpg" || fileExt === "jpeg" || fileExt === "png" || fileExt === "gif") {
+//     return <img src={"https:" + url} alt="blog" />
+//   } else if (fileExt === "mp4") {
+//     return (
+//         <video width="100%" src={"https:" + url} loop autoPlay muted playsInline></video>
+//     )
+//   } else {
+//     return "invalid media"
+//   }
+// }
+
+const BlogPostContentfulTemplate = ({data, pageContext, location}) => {
   const post = data.contentfulPost
   const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
-
+  const {previous, next} = pageContext
+  
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO
-        title={post.title}
-        description={post.description}
-      />
-      <article>
-        <header>
-          <h1>
-            {post.title}
-          </h1>
-        </header>
-        <section dangerouslySetInnerHTML={{ __html: post.content.childContentfulRichText.html }} />
-        <hr />
-      </article>
-
-      <nav>
-        <ul>
-          <li>
-            {previous && (
-              <Link to={previous.slug} rel="prev">
-                ← {previous.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.slug} rel="next">
-                {next.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
-      <Footer />
-    </Layout>
+      <Layout location={location} title={siteTitle}>
+        <SEO
+            title={post.title}
+            description={post.description}
+        />
+        <div className={styles.blog}>
+          <div className={`container ${styles.blogContainer}`}>
+            <div className={styles.blogBtn}>
+              {previous && (
+                  <Link className={styles.btnPrevious} to={previous.slug} rel="prev">
+                    ← Previous
+                  </Link>
+              )}
+            </div>
+            <div className={styles.contentBlock}>
+              <div className={styles.date}>
+                <h3>
+                  {post.date}
+                </h3>
+              </div>
+              <div className={styles.title}>
+                <h1>
+                  {post.title}
+                </h1>
+              </div>
+              <div className={styles.mediaBlock}>
+                {/*{returnImgTagOrVideo(post.media.file.url)}*/}
+                {/* <img src={"https:" + post.media.file.url} alt="blogimage" /> */}
+              </div>
+              <section dangerouslySetInnerHTML={{__html: post.content.childContentfulRichText.html}} />
+            </div>
+            <div className={styles.blogBtn}>
+              {next && (
+                  <Link className={styles.btnNext} to={next.slug} rel="next">
+                    Next →
+                  </Link>
+              )}
+            </div>
+          </div>
+        </div>
+      </Layout>
   )
-}
+};
 
 export default BlogPostContentfulTemplate
 
@@ -59,12 +80,19 @@ export const pageQuery = graphql`
     }
     contentfulPost( slug: { eq: $slug }) {
       title
+      date(formatString: "MMMM DD, YYYY")
       description
       content {
         childContentfulRichText {
           html
         }
       }
+      media {
+        file {
+          url
+          contentType
+        }
+      }
     }
   }
-`
+`;

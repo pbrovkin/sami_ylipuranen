@@ -13,3 +13,9 @@
 .icon:hover {
   fill: var(--green);
 }
+
+@media (max-width: 768px)  {
+  .icon:last-child {
+    margin: 0 1.25rem;
+  }
+}

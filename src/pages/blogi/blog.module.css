@@ -1,11 +1,12 @@
 .blogPage {
-  background-color: #F5F5F5;
+  background-color: var(--smoke);
   width: 100%;
   height: 100%;
+  padding-top: 5rem ;
 }
 
 .blogContainer {
-  padding: 5rem 2.5rem 0 2.5rem;
+  padding: 0 1.25rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -13,43 +14,21 @@
 }
 
 .titleBlock {
-  margin-top: 2.5rem;
+  margin: 1.25rem 0;
   display: flex;
   justify-content: center;
 }
 
-.loginBlock {
+.filterBlock {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.subscrBlock {
   margin-top: 1.25rem;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  font-weight: bold;
-}
-
-.login {
-  color: var(--white);
-  font-size: 1.25rem;
-  cursor: pointer;
-}
-
-.login:active {
-  color: var(--black);
-}
-
-/*.activeLogin {*/
-/*  color: var(--red);*/
-/*  border-bottom: 1px solid var(--red);*/
-/*}*/
-
-.imgBlock {
-  margin-left: .625rem;
-  display: flex;
-}
-
-.iconLock {
-  fill: var(--white);
-  width: 1.25rem;
-  height: 1.25rem;
+  justify-content: center;
 }
 
 .blogBlock {
@@ -70,6 +49,7 @@
 }
 
 .item {
+  width: 100%;
   display: flex;
   max-width: 62.5rem;
   height: 18.75rem;
@@ -83,12 +63,10 @@
   box-shadow: 0px 0px 15px 0px grey;
 }
 
-.imgBlog,
+.imgBlock,
 .entriesBlog {
   width: 50%;
 }
-
-
 
 .imgContainer {
   width: 100%;
@@ -96,13 +74,12 @@
 }
 
 .blogImg {
-  height: 101%;
-
+  max-width: 200%;
 }
 
 .entriesBlog {
-  background-color: #F5F5F5;
-  padding: 2.5rem;
+  background-color: var(--smoke);
+  padding: 1.9rem;
 }
 
 .timeBlog {
@@ -125,14 +102,58 @@
 }
 
 .subtitleBlock {
-  margin-bottom: 1.25rem;
+  min-height: 3.5rem;
+  text-align: center;
 }
 
 .entriesText {
-  min-height: 6.25rem;
+  height: 6rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .entriesButton {
   display: flex;
   justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .item {
+    flex-direction: column;
+    height: 100%;
+    width: 75%;
+  }
+
+  .imgBlock,
+  .entriesBlog {
+    width: 100%;
+  }
+
+  .blogImg {
+    max-width: 100%;
+  }
+
+  .timeBlog {
+    justify-content: center;
+  }
+
+  .entriesText {
+    text-align: center;
+  }
+
+  .entriesButton {
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .blogPage {
+    padding-top: 4rem;
+  }
+
+  .imgBlock {
+    display: none;
+  }
+
 }
