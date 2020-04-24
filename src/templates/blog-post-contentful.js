@@ -23,7 +23,7 @@ const BlogPostContentfulTemplate = ({ data, pageContext, location }) => {
   const post = data.contentfulPost
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
-  console.log(post.media.file.url);
+ /*  console.log(post.media.file.url); */
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
