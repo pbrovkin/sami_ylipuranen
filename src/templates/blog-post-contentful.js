@@ -6,18 +6,18 @@ import '../styles/global.css'
 import styles from './blog-post-contentfull.module.css'
 
 
-function returnImgTagOrVideo(url) {
-  let fileExt = url.substring(url.lastIndexOf(".") + 1, url.length) || url
-  if (fileExt === "jpg" || fileExt === "jpeg" || fileExt === "png" || fileExt === "gif") {
-    return <img src={"https:" + url} alt="blog" />
-  } else if (fileExt === "mp4") {
-    return (
-        <video width="100%" src={"https:" + url} loop autoPlay muted playsInline></video>
-    )
-  } else {
-    return "invalid media"
-  }
-}
+// function returnImgTagOrVideo(url) {
+//   let fileExt = url.substring(url.lastIndexOf(".") + 1, url.length) || url
+//   if (fileExt === "jpg" || fileExt === "jpeg" || fileExt === "png" || fileExt === "gif") {
+//     return <img src={"https:" + url} alt="blog" />
+//   } else if (fileExt === "mp4") {
+//     return (
+//         <video width="100%" src={"https:" + url} loop autoPlay muted playsInline></video>
+//     )
+//   } else {
+//     return "invalid media"
+//   }
+// }
 
 const BlogPostContentfulTemplate = ({data, pageContext, location}) => {
   const post = data.contentfulPost
