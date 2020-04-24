@@ -1,9 +1,9 @@
 import React from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
-import formStyles from "./Subscription.module.css"
+import formStyles from "./subscription.module.css"
 import Greeting from "./greeting"
 
-export default class Subscription extends React.Component {
+class Subscription extends React.Component {
   state = {
     email: "",
     name: "",
@@ -42,24 +42,34 @@ export default class Subscription extends React.Component {
               className={formStyles.EmailListForm}
               onSubmit={this._handleSubmit}
             >
-              <label>Email</label>
+            <fieldset>
+              <legend>Kirjaudu blogin päivitykset</legend>
+              <label for="email">Sähköposti
               <input
                 type="email"
                 value={this.state.email}
                 onChange={event => this._handleChange(event)}
-                placeholder="email@email.com"
+                placeholder="nimi@gmail.com"
                 name="email"
+                id="email"
                 required
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+`?\.[a-z]{2,4}$"
               />
-              <label>Name</label>
+              </label>
+              
+              <label for="name">Nimi
               <input
                 type="text"
                 value={this.state.name}
                 onChange={event => this._handleChange(event)}
-                placeholder="Name"
+                placeholder=""
                 name="name"
+                id="name"
               />
+              </label>
+            </fieldset>
+              
+              
 
               <button type='submit'>Subscribe</button>
             </form>
@@ -69,3 +79,5 @@ export default class Subscription extends React.Component {
     )
   }
 }
+
+export default Subscription
