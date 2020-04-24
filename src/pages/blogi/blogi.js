@@ -8,6 +8,7 @@ import Button from "../../components/button";
 import Sprite from '../../img/sprite.svg'
 import imgBlog from '../../img/blog-block-left.png'
 import Filter from "../../components/filter";
+import Subscription from "../../components/subscription/blogSubscription"
 
 
 const Blogi = ({data, location}) => {
@@ -56,6 +57,7 @@ const Blogi = ({data, location}) => {
               <div className={styles.titleBlock}>
                 <Title title={'Blogi'} />
               </div>
+              <Subscription/>
               <div className={styles.blogBlock}>
               <Filter onChange={handleFilterChange} value={filter}/>
                 <ul className={styles.list}>
@@ -88,6 +90,7 @@ const Blogi = ({data, location}) => {
                   )}
                 </ul>
               </div>
+        
             </div>
           </div>
         </Layout>
