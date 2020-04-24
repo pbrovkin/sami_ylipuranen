@@ -1,7 +1,7 @@
 import React from 'react'
 
 const sectionTitle = {
-  fontSize: '28px',
+  fontSize: '1.75rem',
   color: 'var(--black)',
   textTransform: 'uppercase',
   fontWeight: 'bold',

@@ -5,27 +5,28 @@
 }
 
 .servicesContainer {
-  padding: 80px 40px 0 40px;
+  padding: 3rem 1.25rem 0 1.25rem;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
 .titleBlock {
-  margin-top: 40px;
+  margin-top: 2.5rem;
   display: flex;
   justify-content: center;
 }
 
 .servicesWelcome {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
   color: black;
-  font-size: 19px;
+  font-size: 1.1875rem;
+  text-align: left;
 }
 
 .linkSyke {
-  margin: 0 10px;
+  margin: 0 0.625rem;
   color: var(--green);
   text-transform: uppercase;
   font-weight: bold;
@@ -47,16 +48,16 @@
 
 .item {
   width: 21rem;
-  min-height: 380px;
+  min-height: 23.75rem;
   color: var(--black);
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #F5F5F5;
   border-radius: 5px;
-  margin: 25px;
+  margin: 1.5625rem;
   box-shadow: 0px 0px 10px 0px grey;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .item:hover {
@@ -64,7 +65,7 @@
 }
 
 .servicesLink {
-  padding: 20px;
+  padding: 1.25rem;
   color: var(--black);
 }
 
@@ -79,4 +80,29 @@
 
 .buttonBlock {
   text-align: center;
+}
+
+@media (max-width: 375px) {
+  .titleBlock {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .servicesWelcome {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: black;
+    font-size: 1.0625rem;
+
+  }
+
+  .linkSyke {
+    margin: 0 0.5rem;
+    color: var(--green);
+    text-transform: uppercase;
+    font-weight: 500;
+    border-bottom: 1px solid var(--green);
+  }
+
 }
