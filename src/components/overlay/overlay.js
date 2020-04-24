@@ -37,8 +37,8 @@ const Overlay = ({clazz, setClass}) => {
               </Link>
             </div>
             <div className='btnBlock'>
-              <div onClick={() => onChangeClass()}
-                   className='btnClosed'>X</div>
+              <Link to="#" onClick={() => onChangeClass()}
+                   className='btnClosed'>X</Link>
             </div>
           </div>
           <div className='navBlock'>

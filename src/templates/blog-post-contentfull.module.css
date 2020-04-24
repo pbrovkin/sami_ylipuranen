@@ -40,6 +40,7 @@
   text-transform: uppercase;
   position: fixed;
   top: 50%;
+  color: var(--green);
 }
 
 @media (max-width: 768px) {
@@ -60,16 +61,17 @@
     width: 100%;
   }
 
+  .title {
+    text-align: center;
+  }
+
   .blogBtn {
     width: 100%;
     margin: 30px;
   }
 
-  .contentBlock {
-    text-align: center;
-  }
-
   .date {
     margin: 20px 0 20px 0;
+    text-align: center;
   }
 }
