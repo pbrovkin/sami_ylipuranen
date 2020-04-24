@@ -7,21 +7,21 @@ module.exports = {
     title: `Terveet Tavat`,
     menuLinks: [
       {
-        name: 'Etusivu',
-        link: '/'
+        name: "Etusivu",
+        link: "/",
       },
       {
-        name: 'Verkkovalmennus',
-        link: '/verkkovalmennus'
+        name: "Verkkovalmennus",
+        link: "/verkkovalmennus",
       },
       {
-        name: 'Blogi',
-        link: '/blogi'
+        name: "Blogi",
+        link: "/blogi",
       },
       {
-        name: 'Yhteystiedot',
-        link: '/yhteystiedot'
-      }
+        name: "Yhteystiedot",
+        link: "/yhteystiedot",
+      },
     ],
     author: {
       name: `Sami Ylipuranen`,
@@ -38,7 +38,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Montserrat","Lato"],
+          families: ["Montserrat", "Lato"],
           urls: ["./static/fonts/font.css"],
         },
       },
@@ -73,18 +73,18 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-mailchimp',
+      resolve: "gatsby-plugin-mailchimp",
       options: {
-        endpoint: "https://gmail.us4.list-manage.com/subscribe/post?u=5f53e9e0425e25be4ef97729a&amp;id=f7a1734428",
-      },
+        endpoint:
+       process.env.MAILCHIMP_LINK_ID },
     },
-    'gatsby-plugin-sass',
+    "gatsby-plugin-sass",
     {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `az44re8kag24`,
-        accessToken:`N8O-4Vq0O89bBs0sOTcq_3ZRLIoa4-RCuxapcEYxQSM`
-      }
+        accessToken: `N8O-4Vq0O89bBs0sOTcq_3ZRLIoa4-RCuxapcEYxQSM`,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -108,12 +108,6 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `@contentful/gatsby-transformer-contentful-richtext`,
-    
-   
   ],
-  
+ 
 };
-
-
-
-

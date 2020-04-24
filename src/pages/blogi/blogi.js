@@ -8,6 +8,7 @@ import Button from "../../components/button";
 import Sprite from '../../img/sprite.svg'
 import imgBlog from '../../img/blog-block-left.png'
 import Filter from "../../components/filter";
+import Subscription from "../../components/subscription/blogsubscription"
 
 
 const Blog = ({data, location}) => {
@@ -37,6 +38,7 @@ const Blog = ({data, location}) => {
               <div className={styles.subscrBlock}>
                 {/*<Button label={'Subscribe'}/>*/}
               </div>
+              <Subscription/>
               <div className={styles.blogBlock}>
                 <ul className={styles.list}>
                   {postsToShow.map(({node}) => {
@@ -76,6 +78,7 @@ const Blog = ({data, location}) => {
                   )}
                 </ul>
               </div>
+        
             </div>
           </div>
         </Layout>
