@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import styles from './contact.module.css';
-import Title from "../../components/Title";
+import Title from "../../components/title";
 import imgPerson from '../../img/S.png'
 
 const Yhteystiedot = () => {
