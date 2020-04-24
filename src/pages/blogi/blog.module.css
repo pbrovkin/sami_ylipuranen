@@ -155,4 +155,10 @@
     display: none;
   }
 
+  .subtitleBlock {
+    justify-content: center;
+    display: flex;
+  }
+
+
 }
