@@ -7,6 +7,7 @@ const Hamburger = ({setClass}) => {
     setClass('overlayDisplay')
   };
   
+  
   return (
       <>
           <ul onClick={() => onChangeClass()} className={styles.list}>
