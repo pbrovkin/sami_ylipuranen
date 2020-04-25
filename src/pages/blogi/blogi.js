@@ -8,12 +8,8 @@ import Button from "../../components/button";
 import Sprite from '../../img/sprite.svg'
 import imgBlog from '../../img/blog-block-left.png'
 import Filter from "../../components/filter";
-<<<<<<< HEAD
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-
-=======
 import Subscription from "../../components/subscription/blogsubscription"
->>>>>>> 7c7e3ee139251d7ab69151d72b2db8a43066f17e
 
 
 const Blog = ({data, location}) => {
