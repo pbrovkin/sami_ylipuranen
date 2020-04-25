@@ -58,11 +58,6 @@
   margin: 1.5625rem;
   box-shadow: 0 0 0.625rem 0 grey;
   padding: 1.25rem;
-  cursor: pointer;
-}
-
-.item:hover {
-  box-shadow: 0 0 0.9375rem 0 grey;
 }
 
 .servicesLink {

@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import {Link, graphql} from "gatsby"
+import {graphql} from "gatsby"
 import Layout from "../../components/layout"
 import styles from "./blog.module.css";
 import Title from "../../components/title";
@@ -8,6 +8,8 @@ import Button from "../../components/button";
 import Sprite from '../../img/sprite.svg'
 import imgBlog from '../../img/blog-block-left.png'
 import Filter from "../../components/filter";
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 
 
 const Blog = ({data, location}) => {
@@ -65,9 +67,9 @@ const Blog = ({data, location}) => {
                                   <p>{node.description}</p>
                                 </div>
                                 <div className={styles.entriesButton}>
-                                  <Link to={node.slug}>
+                                  <AniLink cover bg='#00C68B' duration={.8} direction='top' to={node.slug}>
                                     <Button label={'Reed more'} />
-                                  </Link>
+                                  </AniLink>
                                 </div>
                               </div>
                             </li>
