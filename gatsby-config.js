@@ -108,12 +108,7 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `@contentful/gatsby-transformer-contentful-richtext`,
-<<<<<<< HEAD
     `gatsby-plugin-transition-link`,
-    
-   
-=======
->>>>>>> 7c7e3ee139251d7ab69151d72b2db8a43066f17e
   ],
  
 };
