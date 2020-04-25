@@ -1,4 +1,5 @@
 import Blogi from "./blogi"
+import { graphql } from 'gatsby'
 
 export default Blogi
 
