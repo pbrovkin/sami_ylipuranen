@@ -68,7 +68,7 @@ const Blog = ({data, location}) => {
                                   <p>{node.description}</p>
                                 </div>
                                 <div className={styles.entriesButton}>
-                                  <AniLink cover bg='#00C68B' duration={.8} direction='top' to={node.slug}>
+                                  <AniLink paintDrip hex='#00C68B'  to={node.slug}>
                                     <Button label={'Reed more'} />
                                   </AniLink>
                                 </div>
