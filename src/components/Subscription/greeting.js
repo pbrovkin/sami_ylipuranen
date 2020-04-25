@@ -4,14 +4,11 @@ import formStyles from './subscription.module.css'
 
  const Greeting = (props) => {
     return (
-       <div className={formStyles.greeting}>
-         
-            <h1>Thanks for signing up,{props.name}!</h1>
-            <p>You'll be getting my information about blogs in your inbox.</p>
+       <div className={formStyles.greeting}>   
+            <h1 className={formStyles.ThankYouH}>Kiitos rekisteröitymisestäsi,{props.name}!</h1>
+            <p className={formStyles.ThankYouP}>Saatte nyt blogipäivitykset sähköpostiin.</p>
            {/* <Link to='/blogi'> <button >Go Back</button></Link> */}
        </div>
-       
-
     )
 }
 export default Greeting

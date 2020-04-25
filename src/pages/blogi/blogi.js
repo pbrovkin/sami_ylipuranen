@@ -30,7 +30,7 @@ const Blog = ({data, location}) => {
           <div className={styles.blogPage}>
             <div className={`container ${styles.blogContainer}`}>
               <div className={styles.titleBlock}>
-                <Title title={'My Blog'} />
+                <Title title={'Blogi'} />
               </div>
               <div className={styles.filterBlock}>
                 <Filter onChange={handleFilterChange} value={filter} />
@@ -68,7 +68,7 @@ const Blog = ({data, location}) => {
                                 </div>
                                 <div className={styles.entriesButton}>
                                   <Link to={node.slug}>
-                                    <Button label={'Reed more'} />
+                                    <Button label={'Lue Lisää'} />
                                   </Link>
                                 </div>
                               </div>

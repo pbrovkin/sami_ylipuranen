@@ -43,36 +43,38 @@ class Subscription extends React.Component {
               className={formStyles.EmailListForm}
               onSubmit={this._handleSubmit}
             >
-            <fieldset>
-              <legend>Kirjaudu blogin päivitykset</legend>
-              <label for="email">Sähköposti
-              <input className={formStyles.input}
-                type="email"
-                value={this.state.email}
-                onChange={event => this._handleChange(event)}
-                placeholder="nimi@gmail.com"
-                name="email"
-                id="email"
-                required
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+`?\.[a-z]{2,4}$"
-              />
-              </label>
-              
-              <label for="name">Nimi
-              <input className={formStyles.input}
-                type="text"
-                value={this.state.name}
-                onChange={event => this._handleChange(event)}
-                placeholder=""
-                name="name"
-                id="name"
-              />
-              </label>
+            <fieldset className={formStyles.Fieldset}>
+              <legend className={formStyles.Legend}>rekisteröidy blogipäivityksiin</legend>
+              <div>
+                <label for="email" className={formStyles.Label}>Sähköposti:
+                <input className={formStyles.SignUpinput}
+                  type="email"
+                  value={this.state.email}
+                  onChange={event => this._handleChange(event)}
+                  name="email"
+                  id="email"
+                  required
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+`?\.[a-z]{2,4}$"
+                  />
+                </label>
+              </div>
+              <br/>
+              <div>
+                <label for="name">Nimi:
+                <input className={formStyles.SignUpinput}
+                  type="text"
+                  value={this.state.name}
+                  onChange={event => this._handleChange(event)}
+                  placeholder=""
+                  name="name"
+                  id="name"
+                />
+                </label>
+              </div>
+              <div className={formStyles.ButtonDiv}>
+              <Button label={'Kirjaudu'}/>
+              </div>
             </fieldset>
-              
-              
-
-              <Button label={'Subscribe'}/>
             </form>
           )}
         </div>
