@@ -9,12 +9,11 @@ const Hamburger = ({setClass}) => {
   
   return (
       <>
-        <ul onClick={() => onChangeClass()}
-            className={styles.list}>
-          <li className={styles.item}></li>
-          <li className={styles.item}></li>
-          <li className={styles.item}></li>
-        </ul>
+          <ul onClick={() => onChangeClass()} className={styles.list}>
+            <li className={styles.item}></li>
+            <li className={styles.item}></li>
+            <li className={styles.item}></li>
+          </ul>
       </>
   
   )

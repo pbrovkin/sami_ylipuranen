@@ -21,7 +21,7 @@ const Overlay = ({clazz, setClass}) => {
       name: 'Yhteystiedot',
       link: '/yhteystiedot'
     }
-    ];
+  ];
   
   const onChangeClass = () => {
     setClass('overlay')
@@ -38,7 +38,8 @@ const Overlay = ({clazz, setClass}) => {
             </div>
             <div className='btnBlock'>
               <div onClick={() => onChangeClass()}
-                   className='btnClosed'>X</div>
+                   className='btnClosed'>X
+              </div>
             </div>
           </div>
           <div className='navBlock'>
@@ -54,7 +55,7 @@ const Overlay = ({clazz, setClass}) => {
               </ul>
             </nav>
           </div>
-
+        
         </div>
       </div>
   )

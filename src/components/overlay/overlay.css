@@ -96,10 +96,6 @@
     font-size: 2.5rem;
     text-transform: uppercase;
   }
-
-  .btnBlock {
-    padding-right: 15px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -118,10 +114,6 @@
 
   .logo {
     font-size: 1.1rem;
-  }
-
-  .btnBlock {
-    padding-right: 10px;
   }
 
   .btnClosed {

@@ -2,6 +2,7 @@ import React from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import formStyles from "./subscription.module.css"
 import Greeting from "./greeting"
+import Button from "../button";
 
 class Subscription extends React.Component {
   state = {
@@ -45,7 +46,7 @@ class Subscription extends React.Component {
             <fieldset>
               <legend>Kirjaudu blogin päivitykset</legend>
               <label for="email">Sähköposti
-              <input
+              <input className={formStyles.input}
                 type="email"
                 value={this.state.email}
                 onChange={event => this._handleChange(event)}
@@ -58,7 +59,7 @@ class Subscription extends React.Component {
               </label>
               
               <label for="name">Nimi
-              <input
+              <input className={formStyles.input}
                 type="text"
                 value={this.state.name}
                 onChange={event => this._handleChange(event)}
@@ -71,7 +72,7 @@ class Subscription extends React.Component {
               
               
 
-              <button type='submit'>Subscribe</button>
+              <Button label={'Subscribe'}/>
             </form>
           )}
         </div>

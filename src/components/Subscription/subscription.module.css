@@ -26,34 +26,31 @@
     margin-bottom: 1rem;
   }
 
-  input {
+  .input {
     color: #000000;
     box-shadow: 0px 0px 10px 0px grey;
     width: 40%;
     border: none;
-  }
-
-  input {
     margin: 0.5rem;
     padding: 1rem 1.5rem;
   }
 
-  button {
-    width: 20%;
-    display: inline-block;
-    border: none;
-    background-image: none;
-    background-color: rgb(5, 221, 120);
-    color: white;
-    margin: 0.5rem;
-    padding: 1rem 1.5rem;
+  /*button {*/
+  /*  width: 20%;*/
+  /*  display: inline-block;*/
+  /*  border: none;*/
+  /*  background-image: none;*/
+  /*  background-color: rgb(5, 221, 120);*/
+  /*  color: white;*/
+  /*  margin: 0.5rem;*/
+  /*  padding: 1rem 1.5rem;*/
 
-    letter-spacing: 1px;
-    transition: all 0.1s linear;
-  }
-    button:hover{
-      cursor: pointer;
-      background: darken(rgb(5, 221, 34), 15%);
-    }
+  /*  letter-spacing: 1px;*/
+  /*  transition: all 0.1s linear;*/
+  /*}*/
+  /*  button:hover{*/
+  /*    cursor: pointer;*/
+  /*    background: darken(rgb(5, 221, 34), 15%);*/
+  /*  }*/
   
 
