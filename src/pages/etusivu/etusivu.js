@@ -2,6 +2,8 @@ import React from 'react'
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import styles from './home.module.css'
+import Typist from 'react-typist';
+
 
 const Etusivu = () => {
   
@@ -12,7 +14,10 @@ const Etusivu = () => {
             <div className={styles.homeContent}>
               <div className={styles.titleBlock}>
                 <SEO title="Terveet Tavat" />
-                <h1 className={styles.title}>Terveet Tavat</h1>
+                <Typist cursor={{show: true,hideWhenDone: true,
+                  hideWhenDoneDelay: 1200}} startDelay={1200} avgTypingDelay={100}>
+                  <h1 className={styles.title}>Terveet Tavat</h1>
+                </Typist>
               </div>
               <div className={styles.descBlock}>
                 <p>

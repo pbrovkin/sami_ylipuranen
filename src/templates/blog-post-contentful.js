@@ -35,7 +35,7 @@ const BlogPostContentfulTemplate = ({data, pageContext, location}) => {
           <div className={`container ${styles.blogContainer}`}>
             <div className={styles.blogBtn}>
               {previous && (
-                  <AniLink fade duration={.5} className={styles.btnPrevious} to={previous.slug} rel="prev">
+                  <AniLink fade duration={.3} className={styles.btnPrevious} to={previous.slug} rel="prev">
                     ← Previous
                   </AniLink>
               )}
@@ -59,7 +59,7 @@ const BlogPostContentfulTemplate = ({data, pageContext, location}) => {
             </div>
             <div className={styles.blogBtn}>
               {next && (
-                  <AniLink fade duration={.5} className={styles.btnNext} to={next.slug} rel="next">
+                  <AniLink fade duration={.3} className={styles.btnNext} to={next.slug} rel="next">
                     Next →
                   </AniLink>
               )}
