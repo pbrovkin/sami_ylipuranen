@@ -1,15 +1,26 @@
 import React from 'react'
+import {graphql, useStaticQuery} from "gatsby"
 import Sprite from '../../img/sprite.svg'
 import styles from './social.module.css'
 
 const Social = () => {
-
-  const socials = [
-    { id: 1, link: 'https://www.instagram.com/samiaaronn/', name: '#inst' },
-    { id: 2, link: 'https://www.youtube.com/', name: '#youtube' },
-    { id: 3, link: 'https://www.facebook.com/samiaaronn/', name: '#facebook' },
-  ];
-
+  const data = useStaticQuery(graphql`
+    query {
+    site {
+      siteMetadata {
+        socials {
+          id
+          link
+          name
+        }
+      }
+    }
+  }
+  `);
+  
+  const socials = data.site.siteMetadata.socials
+  
+  console.log(data);
   return (
     <ul className={styles.socialList}>
       {socials.map((i) => <li key={i.id} >

@@ -4,6 +4,11 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
+    socials: [
+      { id: 1, link: 'https://www.instagram.com/samiaaronn/', name: '#inst'},
+      { id: 2, link: 'https://www.youtube.com/', name: '#youtube'},
+      { id: 3, link: 'https://www.facebook.com/samiaaronn/', name: '#facebook'},
+    ],
     title: `Terveet Tavat`,
     menuLinks: [
       {

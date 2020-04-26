@@ -38,8 +38,8 @@ const Blog = ({data, location}) => {
               </div>
               <div className={styles.subscrBlock}>
                 {/*<Button label={'Subscribe'}/>*/}
+                <Subscription/>
               </div>
-              <Subscription/>
               <div className={styles.blogBlock}>
                 <ul className={styles.list}>
                   {postsToShow.map(({node}) => {

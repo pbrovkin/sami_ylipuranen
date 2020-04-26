@@ -76,6 +76,10 @@ p {
 }
 
 /*styles for Typist animation*/
+.Typist {
+  width: 100%;
+}
+
 .Typist .Cursor {
   display: inline-block;
   margin-bottom: 2rem;
