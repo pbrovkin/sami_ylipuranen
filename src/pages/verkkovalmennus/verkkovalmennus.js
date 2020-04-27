@@ -46,7 +46,7 @@ const Verkkovalmennus = () => {
               <Title title={'Verkkovalmennus'} />
             </div>
             <div className={styles.servicesWelcome}>
-              <p>Tervetuloa treenamaan verkossa
+              <p className={styles.textBlock}>Tervetuloa treenamaan verkossa
                 <a className={styles.linkSyke}
                    href="https://syketribe.fi"
                    target="_blank"

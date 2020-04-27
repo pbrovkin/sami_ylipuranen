@@ -22,7 +22,6 @@
   margin-bottom: 1.075rem;
   color: black;
   /*font-size: 1.1875rem;*/
-  text-align: left;
 }
 
 .linkSyke {
@@ -74,8 +73,11 @@
   text-align: center;
   min-height: 3rem;
 }
-
 .textBlock {
+  text-align: left;
+}
+
+.servicesText {
   text-align: left;
 }
 

@@ -17,8 +17,6 @@
 .homeContent {
   display: flex;
   flex-direction: column;
-  max-width: 63.75rem;
-  height: 31.25rem;
   background-color: rgba(0, 0, 0, .5);
   border-radius: 5px;
   overflow: hidden;
@@ -63,9 +61,6 @@
 @media (min-width: 300px) {
   .homeContent {
     padding: .5rem;
-    max-width: 90%;
-    height: 90%;
-    
   }
 
   .title {
