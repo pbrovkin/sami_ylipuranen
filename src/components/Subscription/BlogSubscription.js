@@ -34,8 +34,7 @@ class Subscription extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>
+        <>
           {this.state.isSubscribed === true ? (
             <Greeting name={this.state.name} />
           ) : (
@@ -77,8 +76,7 @@ class Subscription extends React.Component {
             </fieldset>
             </form>
           )}
-        </div>
-      </div>
+        </>
     )
   }
 }

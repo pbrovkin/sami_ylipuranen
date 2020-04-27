@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import {Link, graphql} from "gatsby"
+import {graphql} from "gatsby"
 import Layout from "../../components/layout"
 import styles from "./blog.module.css";
 import Title from "../../components/title";
@@ -9,6 +9,7 @@ import Sprite from '../../img/sprite.svg'
 import imgBlog from '../../img/blog-block-left.png'
 import Filter from "../../components/filter";
 import Subscription from "../../components/subscription/blogsubscription"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 
 const Blog = ({data, location}) => {
@@ -37,8 +38,8 @@ const Blog = ({data, location}) => {
               </div>
               <div className={styles.subscrBlock}>
                 {/*<Button label={'Subscribe'}/>*/}
+                <Subscription/>
               </div>
-              <Subscription/>
               <div className={styles.blogBlock}>
                 <ul className={styles.list}>
                   {postsToShow.map(({node}) => {
@@ -67,9 +68,9 @@ const Blog = ({data, location}) => {
                                   <p>{node.description}</p>
                                 </div>
                                 <div className={styles.entriesButton}>
-                                  <Link to={node.slug}>
+                                  <AniLink fade duration={.5} to={node.slug}>
                                     <Button label={'Lue Lisää'} />
-                                  </Link>
+                                  </AniLink>
                                 </div>
                               </div>
                             </li>

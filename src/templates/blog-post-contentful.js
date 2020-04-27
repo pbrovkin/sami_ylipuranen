@@ -1,9 +1,10 @@
 import React from "react"
-import {Link, graphql} from "gatsby"
+import {graphql} from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo/seo"
 import '../styles/global.css'
 import styles from './blog-post-contentfull.module.css'
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 
 // function returnImgTagOrVideo(url) {
@@ -34,9 +35,9 @@ const BlogPostContentfulTemplate = ({data, pageContext, location}) => {
           <div className={`container ${styles.blogContainer}`}>
             <div className={styles.blogBtn}>
               {previous && (
-                  <Link className={styles.btnPrevious} to={previous.slug} rel="prev">
+                  <AniLink fade duration={.3} className={styles.btnPrevious} to={previous.slug} rel="prev">
                     ← Previous
-                  </Link>
+                  </AniLink>
               )}
             </div>
             <div className={styles.contentBlock}>
@@ -58,9 +59,9 @@ const BlogPostContentfulTemplate = ({data, pageContext, location}) => {
             </div>
             <div className={styles.blogBtn}>
               {next && (
-                  <Link className={styles.btnNext} to={next.slug} rel="next">
+                  <AniLink fade duration={.3} className={styles.btnNext} to={next.slug} rel="next">
                     Next →
-                  </Link>
+                  </AniLink>
               )}
             </div>
           </div>
