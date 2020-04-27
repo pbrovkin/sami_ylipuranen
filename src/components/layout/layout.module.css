@@ -1,9 +1,13 @@
+.wrapper {
+  position: relative;
+}
+
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 .content {
   flex-grow: 1;
+  position: relative;
 }

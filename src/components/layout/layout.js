@@ -31,14 +31,15 @@ const Layout = ({ children }) => (
           ]}
         >
         </Helmet>
-
-        <div className={styles.container}>
-          <div className={styles.content}>
-            <Header menuLinks={data.site.siteMetadata.menuLinks}
-              siteTitle={data.site.siteMetadata.title} />
-            {children}
-            <Footer />
+        <div className={styles.wrapper}>
+          <div className={styles.container}>
+            <div className={styles.content}>
+              <Header menuLinks={data.site.siteMetadata.menuLinks}
+                      siteTitle={data.site.siteMetadata.title} />
+              {children}
+            </div>
           </div>
+          <Footer />
         </div>
       </>
     )}
