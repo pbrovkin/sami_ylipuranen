@@ -86,7 +86,7 @@
 
 @media (max-width: 768px) {
   .servicesWelcome {
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -104,7 +104,7 @@
     margin-bottom: 1.5rem;
     color: black;
     font-size: 1.0625rem;
-
+    text-align: left;
   }
 
   .linkSyke {
@@ -116,7 +116,7 @@
   }
 
   .textBlock {
-    text-align: center;
+    text-align: left;
   }
 
 }
