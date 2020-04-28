@@ -98,3 +98,9 @@ p {
     opacity: 1;
   }
 }
+
+@media (max-width: 320px) {
+  .Typist .Cursor {
+    margin-bottom: .5rem;
+  }
+}

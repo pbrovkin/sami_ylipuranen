@@ -15,7 +15,7 @@ const Etusivu = () => {
               <div className={styles.titleBlock}>
                 <SEO title="Terveet Tavat" />
                 <Typist cursor={{show: true,hideWhenDone: true,
-                  hideWhenDoneDelay: 1200}} startDelay={1200} avgTypingDelay={100}>
+                  hideWhenDoneDelay: 100}} startDelay={1600} avgTypingDelay={100}>
                   <h1 className={styles.title}>Terveet Tavat</h1>
                 </Typist>
               </div>

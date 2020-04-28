@@ -1,3 +1,5 @@
+/*styles for Typist animation is in global.css file*/
+
 .homePage {
   background: url("../../img/bg_home.jpg") center center no-repeat;
   background-size: cover;
@@ -20,6 +22,7 @@
   border-radius: 5px;
   overflow: hidden;
   padding: 2.5rem;
+  min-height: 13.75rem;
 }
 
 .titleBlock {
@@ -27,7 +30,7 @@
   color: var(--white);
   display: flex;
   align-items: center;
-  
+  font-size: 2.625rem; /*size for cursor Typist*/
 }
 
 .title {
@@ -41,10 +44,9 @@
 
 .descBlock {
   display: flex;
-  width: 60%;
   color: var(--white);
   font-size: 1.25rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .quoteBlock {
@@ -55,37 +57,12 @@
   justify-content: flex-end;
 }
 
-/*Media Queries*/
-
-@media (min-width: 300px) {
-  .homeContent {
-    padding: .5rem;
-  }
-
-  .title {
-    font-size: 1.8rem;
-  }
-
-  .quoteBlock {
-    width: 100%;
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .descBlock {
-    font-size: .9rem;
-    width: 100%;
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-}
 
 
 @media (min-width: 1024px) {
   .homeContent {
     padding: 2.5rem;
     max-width: 63.75rem;
-    height: 31.25rem;
   }
 }
 
@@ -93,12 +70,10 @@
   .homeContent {
     padding: 1rem;
     max-width: 50rem;
-    height: 30rem;
     align-items: center;
   }
 
   .titleBlock {
-    margin-top: 1.5rem;
     text-align: center;
   }
 
@@ -116,14 +91,15 @@
 }
 
 @media (max-width: 480px) {
-  .homeContainer {
-    margin-bottom: 3rem;
-  }
 
   .homeContent {
     padding: 1rem;
     max-width: 30rem;
 
+  }
+
+  .titleBlock {
+    font-size: 1.8rem; /*size for cursor Typist*/
   }
 
   .title {
@@ -140,6 +116,33 @@
     font-size: .9rem;
     width: 100%;
     margin-bottom: 2rem;
+  }
+}
+
+/*Media Queries*/
+
+@media (max-width: 320px) {
+  .homeContent {
+    padding: .5rem;
+    margin-bottom: 4rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+  }
+
+  .quoteBlock {
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .descBlock {
+    font-size: .9rem;
+    width: 100%;
+    margin-bottom: .5rem;
+    text-align: left;
   }
 }
 

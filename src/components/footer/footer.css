@@ -63,6 +63,8 @@
 
     .footer-container {
         display: flex;
+        padding-top: 1rem;
+        justify-content: flex-start;
     }
 
     .social-block {
