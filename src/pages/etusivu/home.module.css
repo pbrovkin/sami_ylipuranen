@@ -3,7 +3,6 @@
   background-size: cover;
   width: 100%;
   height: 100vh;
-  padding-top: 5rem;
 }
 
 .homeContainer {
@@ -117,10 +116,14 @@
 }
 
 @media (max-width: 480px) {
+  .homeContainer {
+    margin-bottom: 3rem;
+  }
+
   .homeContent {
     padding: 1rem;
     max-width: 30rem;
-   
+
   }
 
   .title {
