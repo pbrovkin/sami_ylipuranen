@@ -7,6 +7,7 @@ import { rhythm } from "../utils/typography"
 
 
 function returnImgTagOrVideo(url) {
+  console.log(url)
   let fileExt = url.substring(url.lastIndexOf(".") + 1, url.length) || url
   if (fileExt === "jpg" || fileExt === "jpeg" || fileExt === "png" || fileExt === "gif") {
     return <img src={"https:" + url} alt="blog" />
@@ -23,7 +24,7 @@ const BlogPostContentfulTemplate = ({ data, pageContext, location }) => {
   const post = data.contentfulPost
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
- /*  console.log(post.media.file.url); */
+  /*  console.log(post.media.file.url); */
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -50,8 +51,7 @@ const BlogPostContentfulTemplate = ({ data, pageContext, location }) => {
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.content.childContentfulRichText.html }} />
-        <>{returnImgTagOrVideo(post.media.file.url)}</>
-        {/* <img src={"https:" + post.media.file.url} alt="blogimage" /> */}
+        <>{(post.media === null) ? null : returnImgTagOrVideo(post.media.file.url)}</>
         <hr
           style={{
             marginBottom: rhythm(1),
