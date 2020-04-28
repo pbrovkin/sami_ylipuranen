@@ -1,6 +1,6 @@
 
 
-module.exports.cleanChar = (slug) => { return slug.toLowerCase()
+exports.cleanChar = (slug) => { return slug.toLowerCase()
     .replace(/[']/gi, '')
     .replace(/ /gi, '-')
     .replace(/[,]/gi, '')

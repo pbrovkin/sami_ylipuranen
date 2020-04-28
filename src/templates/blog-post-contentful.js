@@ -23,7 +23,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 const BlogPostContentfulTemplate = ({data, pageContext, location}) => {
   const post = data.contentfulPost
   const siteTitle = data.site.siteMetadata.title
-  const {previous, next} = pageContext
+  const {previousBlog, nextBlog} = pageContext
   
   return (
       <Layout location={location} title={siteTitle}>
@@ -34,8 +34,8 @@ const BlogPostContentfulTemplate = ({data, pageContext, location}) => {
         <div className={styles.blog}>
           <div className={`container ${styles.blogContainer}`}>
             <div className={styles.blogBtn}>
-              {previous && (
-                  <AniLink fade duration={.3} className={styles.btnPrevious} to={previous.slug} rel="prev">
+              {previousBlog && (
+                  <AniLink fade duration={.3} className={styles.btnPrevious} to={previousBlog} rel="prev">
                     ← Previous
                   </AniLink>
               )}
@@ -58,8 +58,8 @@ const BlogPostContentfulTemplate = ({data, pageContext, location}) => {
               <section dangerouslySetInnerHTML={{__html: post.content.childContentfulRichText.html}} />
             </div>
             <div className={styles.blogBtn}>
-              {next && (
-                  <AniLink fade duration={.3} className={styles.btnNext} to={next.slug} rel="next">
+              {nextBlog && (
+                  <AniLink fade duration={.3} className={styles.btnNext} to={nextBlog} rel="next">
                     Next →
                   </AniLink>
               )}
