@@ -53,7 +53,7 @@ const BlogPostContentfulTemplate = ({ data, pageContext, location }) => {
               </h1>
             </div>
             <div className={styles.mediaBlock}>
-              <>{(post.media === null) ? null : returnImgTagOrVideo(post.media.file.url)}</>
+              <div className={styles.mediaItem}>{(post.media === null) ? null : returnImgTagOrVideo(post.media.file.url)}</div>
             </div>
             <section dangerouslySetInnerHTML={{ __html: post.content.childContentfulRichText.html }} />
           </div>

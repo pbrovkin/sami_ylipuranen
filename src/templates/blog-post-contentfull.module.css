@@ -45,7 +45,11 @@
   color: var(--green);
 }
 
-.mediaBlock img {
+.mediaItem {
+  overflow: hidden;
+}
+
+.mediaItem img {
   max-width: 100%;
 }
 
