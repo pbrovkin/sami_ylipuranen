@@ -21,6 +21,8 @@
 .servicesWelcome {
   margin-bottom: 1.075rem;
   color: black;
+  width: 80%;
+  margin: 0 auto;
   /*font-size: 1.1875rem;*/
 }
 
@@ -73,6 +75,7 @@
   text-align: center;
   min-height: 3rem;
 }
+
 .textBlock {
   text-align: left;
 }
@@ -122,4 +125,3 @@
   }
 
 }
-

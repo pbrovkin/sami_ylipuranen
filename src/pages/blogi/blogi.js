@@ -24,6 +24,7 @@ const Blog = ({data, location}) => {
     setFilter(event.target.value)
   };
   
+
   
   return (
       <>
@@ -68,7 +69,12 @@ const Blog = ({data, location}) => {
                                   <p>{node.description}</p>
                                 </div>
                                 <div className={styles.entriesButton}>
-                                  <AniLink fade duration={.5} to={node.slug}>
+                                  <AniLink fade duration={.5} to={node.slug.toLowerCase()
+                                      .replace(/[']/gi, '')
+                                      .replace(/ /gi, '-')
+                                      .replace(/[,]/gi, '')
+                                      .replace(/[ä]/gi, 'a')
+                                      .replace(/[ö]/gi, 'o')}>
                                     <Button label={'Lue Lisää'} />
                                   </AniLink>
                                 </div>

@@ -20,7 +20,7 @@ class Subscription extends React.Component {
   _handleSubmit = e => {
     e.preventDefault()
     
-    console.log(this.state.email,this.state.name)
+   
     addToMailchimp(this.state.email, { NAME: this.state.name })
       .then(data => {
         this.setState({ isSubscribed: true })

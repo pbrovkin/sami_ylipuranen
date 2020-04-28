@@ -32,7 +32,7 @@ module.exports = {
       name: `Sami Ylipuranen`,
       summary: `Valmentaja`,
     },
-    description: `Personal trainer website.`,
+    description: `Terveet Tavat Nettisivut.`,
     siteUrl: `http://localhost:8000/`,
     social: {
       instagram: `samiaaronn`,
@@ -87,8 +87,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `az44re8kag24`,
-        accessToken: `N8O-4Vq0O89bBs0sOTcq_3ZRLIoa4-RCuxapcEYxQSM`,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     `gatsby-transformer-sharp`,

@@ -20,7 +20,6 @@ const Social = () => {
   
   const socials = data.site.siteMetadata.socials
   
-  console.log(data);
   return (
     <ul className={styles.socialList}>
       {socials.map((i) => <li key={i.id} >
