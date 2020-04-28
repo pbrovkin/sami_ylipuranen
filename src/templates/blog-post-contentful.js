@@ -6,7 +6,7 @@ import Footer from "../components/footer"
 import { rhythm } from "../utils/typography"
 
 
-function returnImgTagOrVideo(url) {
+const returnImgTagOrVideo = (url) => {
   console.log(url)
   let fileExt = url.substring(url.lastIndexOf(".") + 1, url.length) || url
   if (fileExt === "jpg" || fileExt === "jpeg" || fileExt === "png" || fileExt === "gif") {
@@ -24,7 +24,7 @@ const BlogPostContentfulTemplate = ({ data, pageContext, location }) => {
   const post = data.contentfulPost
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
-  /*  console.log(post.media.file.url); */
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
