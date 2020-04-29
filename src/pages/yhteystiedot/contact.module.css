@@ -99,3 +99,10 @@
     max-width: 80%;
   }
 }
+
+@media (max-width: 380px) {
+
+  .picPerson {
+    max-width: 50%;
+  }
+}
