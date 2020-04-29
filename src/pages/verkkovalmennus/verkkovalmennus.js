@@ -3,6 +3,7 @@ import Layout from "../../components/layout"
 import Title from "../../components/title";
 import styles from './services.module.css'
 import Subtitle from "../../components/subtitle";
+import SEO from "../../components/seo";
 
 const Verkkovalmennus = () => {
   
@@ -40,6 +41,7 @@ const Verkkovalmennus = () => {
   
   return (
       <Layout>
+        <SEO title="Verkkovalmennus" />
         <div className={styles.servicesPage}>
           <div className={`container ${styles.servicesContainer}`}>
             <div className={styles.titleBlock}>
