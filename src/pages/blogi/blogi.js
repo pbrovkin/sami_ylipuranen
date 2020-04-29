@@ -6,7 +6,7 @@ import Title from "../../components/title";
 import Subtitle from "../../components/subtitle";
 import Button from "../../components/button";
 import Sprite from '../../img/sprite.svg'
-import imgBlog from '../../img/blog-block-left.png'
+import imgBlog from '../../img/lakes.jpg'
 import Filter from "../../components/filter";
 import Subscription from "../../components/subscription/blogsubscription"
 import AniLink from "gatsby-plugin-transition-link/AniLink";
@@ -25,7 +25,8 @@ const Blog = ({data, location}) => {
   };
   
 
-  
+  // Check img at line 53 now it is static but would be nice to show blog post media if possible.
+  // Check line 62 for the time issue.
   return (
       <>
         <Layout location={location}>
@@ -50,7 +51,7 @@ const Blog = ({data, location}) => {
                             <li key={node.slug} className={styles.item}>
                               <div className={styles.imgBlock}>
                                 <div className={styles.imgContainer}>
-                                  <img className={styles.blogImg} src={imgBlog} alt="img" />
+                                  <img className={styles.blogImg} src={imgBlog} alt="img" /> 
                                 </div>
                               </div>
                               <div className={styles.entriesBlog}>
