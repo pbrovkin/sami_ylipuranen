@@ -45,6 +45,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-bottom: 4rem;
 }
 
 .item {
@@ -74,6 +75,7 @@
 .subtitleBlock {
   text-align: center;
   min-height: 3rem;
+  margin-bottom: 1rem;
 }
 
 .textBlock {
@@ -103,7 +105,7 @@
 
 @media (max-width: 480px) {
   .servicesPage {
-    padding-top: 4rem;
+    padding-top: 5rem;
   }
 
   .titleBlock {

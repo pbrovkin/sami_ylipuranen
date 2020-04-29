@@ -8,7 +8,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 
 const returnImgTagOrVideo = (url) => {
-  console.log(url)
+  
   let fileExt = url.substring(url.lastIndexOf(".") + 1, url.length) || url
   if (fileExt === "jpg" || fileExt === "jpeg" || fileExt === "png" || fileExt === "gif") {
     return <img src={"https:" + url} alt="blog" />
