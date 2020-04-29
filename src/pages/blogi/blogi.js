@@ -17,7 +17,7 @@ const Blog = ({data, location}) => {
   const [filter, setFilter] = useState('');
   
   const posts = data.allContentfulPost.edges
-  
+
   const postsToShow = posts.filter(post => post.node.title.toLowerCase().includes(filter.toLowerCase()))
   
   const handleFilterChange = (event) => {
@@ -59,7 +59,7 @@ const Blog = ({data, location}) => {
                                     <use href={Sprite + '#clock'} />
                                   </svg>
                                   <div className={styles.date}>
-                                    April 13, 2020
+                                  Give me the time
                                   </div>
                                 </div>
                                 <div className={styles.subtitleBlock}>

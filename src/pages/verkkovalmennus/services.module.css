@@ -2,7 +2,7 @@
   background-color: var(--smoke);
   width: 100%;
   min-height: 100vh;
-  padding-top: 5rem;
+  padding-top: 7rem;
 }
 
 .servicesContainer {
@@ -49,7 +49,7 @@
 
 .item {
   width: 21rem;
-  min-height: 23.75rem;
+  min-height: 21.75rem;
   color: var(--black);
   display: flex;
   flex-direction: column;
@@ -78,6 +78,8 @@
 
 .textBlock {
   text-align: left;
+  margin-bottom: 4rem;
+  line-height: 1.6rem;
 }
 
 .servicesText {
