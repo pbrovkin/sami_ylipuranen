@@ -10,7 +10,6 @@ import imgBlog from '../../img/lakes.jpg'
 import Filter from "../../components/filter";
 import Subscription from "../../components/subscription/blogsubscription"
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import Img from 'gatsby-image';
 import SEO from "../../components/seo";
 
 
@@ -20,7 +19,7 @@ const Blog = ({data, location}) => {
   const [filter, setFilter] = useState('');
   
   const posts = data.allContentfulPost.edges
-  console.log(data)
+ 
   const postsToShow = posts.filter(post => post.node.title.toLowerCase().includes(filter.toLowerCase()))
   
   const handleFilterChange = (event) => {
@@ -32,7 +31,7 @@ const Blog = ({data, location}) => {
         <Layout location={location}>
           <SEO title="Blogi" />
           <div className={styles.blogPage}>
-            <div className={`container ${styles.blogContainer}`}>
+            <div className={styles.blogContainer}>
               <div className={styles.titleBlock}>
                 <Title title={'Blogi'} />
               </div>
@@ -52,7 +51,7 @@ const Blog = ({data, location}) => {
                             <li key={node.slug} className={styles.item}>
                               <div className={styles.imgBlock}>
                                 <div className={styles.imgContainer}>
-                               { node.media ? <img className={styles.blogImg} src={node.media.fluid.srcWebp} alt="post-preview" /> : <img src={imgBlog} alt="post-preview" />} 
+                               { node.media ? <img className={styles.blogImg} src={node.media.fluid.srcWebp} alt="post-preview" /> : <img src={imgBlog} className={styles.blogImg} alt="post-preview" />} 
                                 </div>
                               </div>
                               <div className={styles.entriesBlog}>
