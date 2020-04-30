@@ -10,11 +10,9 @@ import imgBlog from '../../img/lakes.jpg'
 import Filter from "../../components/filter";
 import Subscription from "../../components/subscription/blogsubscription"
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-<<<<<<< HEAD
 import Img from 'gatsby-image';
-=======
 import SEO from "../../components/seo";
->>>>>>> 24cd93727ba704498404c704628c58adc45dc239
+
 
 
 const Blog = ({data, location}) => {
@@ -29,9 +27,6 @@ const Blog = ({data, location}) => {
     setFilter(event.target.value)
   };
   
-
-  // Check img at line 53 now it is static but would be nice to show blog post media if possible.
-  // Check line 62 for the time issue.
   return (
       <>
         <Layout location={location}>
@@ -57,7 +52,7 @@ const Blog = ({data, location}) => {
                             <li key={node.slug} className={styles.item}>
                               <div className={styles.imgBlock}>
                                 <div className={styles.imgContainer}>
-                               { node.media ? <img className={styles.blogImg} src={node.media.fluid.srcWebp} alt="img" /> : <img src={imgBlog} />} 
+                               { node.media ? <img className={styles.blogImg} src={node.media.fluid.srcWebp} alt="post-preview" /> : <img src={imgBlog} alt="post-preview" />} 
                                 </div>
                               </div>
                               <div className={styles.entriesBlog}>
