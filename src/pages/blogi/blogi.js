@@ -10,7 +10,11 @@ import imgBlog from '../../img/lakes.jpg'
 import Filter from "../../components/filter";
 import Subscription from "../../components/subscription/blogsubscription"
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+<<<<<<< HEAD
 import Img from 'gatsby-image';
+=======
+import SEO from "../../components/seo";
+>>>>>>> 24cd93727ba704498404c704628c58adc45dc239
 
 
 const Blog = ({data, location}) => {
@@ -31,6 +35,7 @@ const Blog = ({data, location}) => {
   return (
       <>
         <Layout location={location}>
+          <SEO title="Blogi" />
           <div className={styles.blogPage}>
             <div className={`container ${styles.blogContainer}`}>
               <div className={styles.titleBlock}>

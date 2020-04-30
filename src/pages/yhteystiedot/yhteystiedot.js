@@ -9,7 +9,7 @@ const Yhteystiedot = () => {
   
   return (
       <Layout>
-        <SEO title="yhteystiedot" />
+        <SEO title="Yhteystiedot" />
         <div className={styles.contactPage}>
           <div className={`container ${styles.contactContainer}`}>
             <div className={styles.contactBlock}>
