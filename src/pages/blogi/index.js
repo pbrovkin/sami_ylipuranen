@@ -16,6 +16,14 @@ export const pageQuery = graphql`
           title
           description
           slug
+          date (formatString: "MMMM DD, YYYY")
+          media {
+            fluid {
+              base64
+              srcWebp
+              srcSetWebp
+            }
+          }
         }
       }
     }
