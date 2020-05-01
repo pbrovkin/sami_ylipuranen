@@ -10,7 +10,7 @@ const Hamburger = ({setClass}) => {
   
   return (
       <>
-          <ul onClick={() => onChangeClass()} className={styles.list}>
+          <ul onClick={() => onChangeClass()} onKeyDown={() => onChangeClass()} className={styles.list}>
             <li className={styles.item}></li>
             <li className={styles.item}></li>
             <li className={styles.item}></li>

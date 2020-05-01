@@ -1,5 +1,4 @@
 import React, {useState} from "react"
-import {graphql} from "gatsby"
 import Layout from "../../components/layout"
 import styles from "./blog.module.css";
 import Title from "../../components/title";
@@ -39,8 +38,7 @@ const Blog = ({data, location}) => {
                 <Filter onChange={handleFilterChange} value={filter} />
               </div>
               <div className={styles.subscrBlock}>
-                {/*<Button label={'Subscribe'}/>*/}
-                <Subscription/>
+                <Subscription />
               </div>
               <div className={styles.blogBlock}>
                 <ul className={styles.list}>
