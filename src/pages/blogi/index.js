@@ -16,7 +16,7 @@ export const pageQuery = graphql`
           title
           description
           slug
-          date (formatString: "MMMM DD, YYYY")
+          date(formatString: "DD-MM-YYYY")
           media {
             fluid {
               base64

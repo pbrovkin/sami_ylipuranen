@@ -10,14 +10,13 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 const returnImgTagOrVideo = (url) => {
   
   let fileExt = url.substring(url.lastIndexOf(".") + 1, url.length) || url
-  if (fileExt === "jpg" || fileExt === "jpeg" || fileExt === "png" || fileExt === "gif") {
-    return <img src={"https:" + url} alt="blog" />
-  } else if (fileExt === "mp4") {
+  console.log(fileExt)
+  if (fileExt === "mp4") {
     return (
       <video width="100%" src={"https:" + url} loop autoPlay muted playsInline></video>
     )
   } else {
-    return "invalid media"
+    return <img src={"https:" + url} alt="blog" />
   }
 }
 
@@ -82,7 +81,7 @@ export const pageQuery = graphql`
     }
     contentfulPost( slug: { eq: $slug }) {
       title
-      date(formatString: "MMMM DD, YYYY")
+      date(formatString: "DD-MM-YYYY")
       description
       content {
         childContentfulRichText {
